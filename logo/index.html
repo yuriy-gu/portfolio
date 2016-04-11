@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Logo</title>
+	<link href="css/reset.css" rel="stylesheet">
+	<link href="css/main.css" rel="stylesheet">
+</head>
+<body>
+	<div id="wrapper">
+		<header>
+			<div id="logo">
+				<a href="#">Logo</a>
+			</div>
+			<nav>
+				<a href="index.html">Home</a>
+				<a href="Portfolio.html">Portfolio</a>
+				<a href="Blog">Blog</a>
+				<a href="Contact">Contact</a>
+				<form class="search" action="" method="post">
+					<input type="search" class="input" name="" placeholder="search" />
+					<input type="submit" name="" value="" class="submit" />
+				</form>
+			</nav>
+		</header>
+		<!--end header-->
+
+		<!--img-slider-->
+		<div class="flex-container">
+			<div class="flexslider">
+				<ul class="slides">
+					<li>
+						<img src="img/town.jpg" width="900" height="350" />
+					</li>
+					<li>
+						<img src="#" width="900" height="350" />
+					</li>
+					<li>
+						<img src="#" width="900" height="350" />
+					</li>
+				</ul>
+			</div>
+		</div>
+		<div class="columns">
+			<section>
+				<img src="img/old-farm.jpg" width="200" height="155" alt="old-farm" />
+				<h4>Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem veleum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer</h4>
+				<span><a href="#">more...</a></span>
+			</section>
+			<section>
+				<img src="img/old-car.jpg" width="200" height="155" alt="old-car" />
+				<h4>Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem veleum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer</h4>
+				<span><a href="#">more...</a></span>
+			</section>
+			<section>
+				<img src="img/flat.jpg" width="200" height="155" />
+				<h4>Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem veleum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer</h4>
+				<span><a href="#">more...</a></span>
+			</section>
+			<section>
+				<img src="img/forest.jpg" width="200" height="155" alt="forest" />
+				<h4>Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem veleum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer</h4>
+				<span><a href="#">more...</a></span>
+			</section>
+		</div>
+		<!--end class="columns"-->
+		<div class="horizontal-content">
+			<div class="images">
+				<img src="img/flat.jpg" width="105" height="80" alt="fantasy-flat" />
+				<img src="img/old-car.jpg" width="105" height="80" alt="old-car" />
+				<img src="img/forest.jpg" width="105" height="80" alt="forest" />
+				<img src="img/old-farm.jpg" width="105" height="80" alt="old-farm" />
+			</div>
+			<div class="hor-cont-text">
+				<h1>Welcome to the site</h1>
+				<p>Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer  Lorem ipsum dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Duis autem vel Lorem ipsum Lorem ipsum	dolor sit amet, uer uer Duis autem vel eum iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, consectetuer Lorem ipsum dolor sit amet, uer uer Duis autem vel eum	iriure Duis autemvel eum iriure dolor. ipsum dolor sit amet, sectetuer.</p>
+				<span><a href="#">more...</a></span>
+			</div>
+		</div>
+		<!--end class="horizontal-content"-->
+
+
+		<footer>
+			<a href="/">Terms of Service</a>
+			<a href="/">Privacy Policy</a>
+			<p>2015 Designed by ...</p>
+		</footer>
+	</div>
+	<script src="js/jquery-1.11.3.min.js"></script>
+	<script src="js/jquery.flexslider-min.js"></script>
+			<script>
+			$(document).ready(function () {
+				$('.flexslider').flexslider({
+					animation: 'fade',
+					controlsContainer: '.flexslider'
+				});
+			});
+		</script>
+</body>
+</html>
