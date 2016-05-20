@@ -235,9 +235,7 @@ footer ul {
 /* ====== services content ======= */
 .propos-item-wrap  {/*img container*/
 	display: inline-block;
-	margin-top: 20px;
-	margin-left: 30px;
-	margin-bottom: 20px;
+	margin: 20px 0 20px 30px;
 	width: 160px;
 }
 .propos-item-wrap:first-child{ margin-left: 0; }
@@ -278,7 +276,7 @@ footer ul {
 
 /* ====== imgages bttm arrows ====== */
 .propos-arr {
-	background: #212121 url(../img/propos_arrows.png) no-repeat -116px 10px;
+	background: #212121 url(../img/propos_arrows.png) no-repeat 80% 10px;
 	border-bottom-right-radius: 10px;
 	border-bottom-left-radius: 10px;
 	cursor: pointer;
@@ -286,7 +284,7 @@ footer ul {
 }
 .propos-item-wrap.active .propos-arr,
 .propos-item-wrap:hover .propos-arr {
-	background: #F32B1C url(../img/propos_arrows.png) no-repeat 72px 10px;
+	background: #F32B1C url(../img/propos_arrows.png) no-repeat -53% 10px;
 }
 
 /* ===== slide menu ======= */

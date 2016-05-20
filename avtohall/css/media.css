@@ -40,14 +40,13 @@
 	}
 	.top-menu a {
 		background-image: none;
-		padding: 0 20px 0 20px;
-		font-size: 18px;
 	}
 	.navigation-panel-text {
+		color: red;
 		font-size: 14px;
 		position: absolute;
-		right: 15px;
-		top: 0;
+		right: 40px;
+		top: -100px;
 	}
 	.proposition {
 		padding: 15px 0;
@@ -57,12 +56,12 @@
 		margin-bottom: 10px;
 		width: 205px;
 	}
-	.propos-arr {
-		background-position: -95px 10px;
+	.propos-item-wrap .propos-arr {
+		background-position: 95% 10px;
 	}
 	.propos-item-wrap.active .propos-arr,
 	.propos-item-wrap:hover .propos-arr {
-		background-position: 95px 10px;
+		background-position: -100% 10px;
 	}
 	.propos-item-wrap-triangle {/*добавляем класс через скрипт*/
 		margin: 16px 92px;
@@ -104,8 +103,11 @@
 	}
 	.top-menu,
 	.top-menu a {
-		height: 50px;
 		line-height: 50px;
+	}
+	.top-menu li {
+		float: none;
+		text-align: center;
 	}
 	header .btn {
 		margin-right: 5px;
@@ -133,6 +135,13 @@
 		margin: 3px 20px;
 		width: 160px;
 	}
+		.propos-item-wrap .propos-arr {
+		background-position: 80% 10px;
+	}
+	.propos-item-wrap.active .propos-arr,
+	.propos-item-wrap:hover .propos-arr {
+		background-position: -53% 10px;
+	}
 	.art-header {
 		font-size: 25px;
 	}
@@ -150,6 +159,7 @@
 	}
 	.boxes-item img {
 		width: 90%;
+		height: 250px;
 	}
 	.context-header,
 	.context-header.button-cont {

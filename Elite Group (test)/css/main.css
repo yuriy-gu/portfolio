@@ -30,7 +30,6 @@
 body {
 	background-color: #fff;
 	font: 100% 'pfd', "century gothic", arial, sans-serif;/*16px*/
-	text-rendering: optimizeLegibility;/*делает особый акцент на то, чтобы текст хорошо читался в ущерб скорости и геометрической четкости. Кернинг и лигатуры включены.*/
 	min-width: 822px;
 }
 
@@ -156,7 +155,6 @@ aside a {
 aside a.active{
 	background-color: #ffb86c;
 }
-
 
 .images li{
 	margin: 24% 0 28% 0;
@@ -288,7 +286,7 @@ article {
 }
 
 .left_text, .right_text {
-	width: 36%;
+	width: 35%;
 	font-family: 'pfd';
 	color: #717171;
 	padding: 2% 1%;
