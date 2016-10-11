@@ -1,0 +1,255 @@
+// Questions
+#block-views-view-question-block {
+  h2 {
+    @include rem(font-size, 18px);
+    color: $black;
+    font-weight: $bold;
+    text-align: center;
+
+    &:first-letter {
+      color: $black;
+    }
+  }
+
+  span {
+    @include rem(margin-bottom, 13px);
+    display: block;
+    text-align: center;
+  }
+
+  a {
+    @include rem(font-size, 14px);
+    color: $black;
+    font-weight: $light;
+    text-decoration: none;
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+}
+
+// All cats
+.all-cat-block {
+  @include rem(margin-top, 56px);
+  text-align: center;
+  h2 {
+    color: $black;
+    &:first-letter {
+      color: $black;
+    }
+  }
+  label {
+    @include rem(font-size, 18px);
+    @include rem(line-height, 18px);
+    @include rem(margin-bottom, 10px);
+    color: $black;
+    display: block;
+    font-weight: $bold;
+  }
+  li.leaf,
+  .form-type-bef-link {
+    @include rem(margin-bottom, 16px);
+    a {
+      @include rem(font-size, 16px);
+      color: $black;
+      font-weight: $normal;
+      text-decoration: none;
+      text-transform: uppercase;
+    }
+  }
+}
+
+// Static block performerer
+.static-block-performer:not(.how) {
+  @include rem(margin-bottom, 50px);
+  @include rem(margin-top, 50px);
+  text-align: center;
+> .pane-content,
+  .content {
+    @include rem(height, 230px);
+    @include rem(max-width, 270px);
+    background-image: url('../images/static-block-performer.png');
+    background-position: center;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    width: 100%;
+    p {
+      @include rem(bottom, 33px);
+      left: 0;
+      position: absolute;
+      right: 0;
+    }
+    a {
+      @include rem(font-size, 16px);
+      color: $white;
+      font-weight: $bold;
+      text-decoration: none;
+    }
+    &:hover {
+      background-image: url('../images/static-block-performer-hv.png');
+      cursor: pointer;
+    }
+  }
+}
+
+// Sort checkbox
+.views-exposed-form .views-exposed-widget {
+  float: none;
+  padding: 0;
+}
+.views-exposed-form .views-widget-sort-by,
+.views-exposed-form .views-widget-checkboxes {
+  @include rem(max-width, 270px);
+  clear: both;
+  float: none;
+  font-weight: normal;
+  margin: 0 auto;
+  padding: 0;
+  text-align: left;
+  width: 100%;
+}
+.views-exposed-form .views-widget-checkboxes {
+  @include rem(padding-top, 15px);
+  input {
+    float: left;
+  }
+  label {
+    @include rem(font-size, 14px);
+    font-size: 14px;
+    font-weight: $light;
+  }
+}
+
+// Sort selectlist
+.views-widget-sort-by {
+  position: relative;
+  label {
+    @include rem(height, 15px);
+    @include rem(left, 10px);
+    @include rem(margin-top, -8px);
+    @include rem(width, 15px);
+    background: url('../images/icons/star-blue.png') no-repeat;
+    display: block;
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    z-index: 0;
+  }
+  select {
+    @include border-radius(0);
+    @include rem(padding, 8px 10px 8px 35px);
+    border-color: $border-checkbox;
+    position: relative;
+    z-index: 1;
+  }
+}
+
+// Yandex map
+.ymap-block {
+  display: none;
+}
+
+// Random tasks
+.random-tasks {
+  @include rem(max-width, 244px);
+  margin: 20px auto 0 auto;
+  .views-row {
+    @include rem(margin-bottom, 15px);
+  }
+  h2 {
+    @include rem(font-size, 18px);
+    @include rem(line-height, 18px);
+    color: $black;
+    font-weight: $bold;
+    text-align: center;
+    &:first-letter {
+      color: $black;
+    }
+  }
+  .views-field-title {
+    a {
+      @include rem(font-size, 14px);
+      @include rem(line-height, 18px);
+      color: $black;
+      font-weight: $light;
+      text-decoration: none;
+    }
+  }
+  .views-field-nothing {
+    .field-content {
+      font-weight: $light;
+    }
+  }
+}
+
+@include breakpoint($mid_device_width) {
+  .all-cat-block {
+    @include rem(margin-bottom, 50px);
+    @include span(6 of 12);
+    margin-top: 0;
+  }
+  .page-tasks .all-cat-block {
+    @include last;
+  }
+  .static-block-performer:not(.how) {
+    @include span(6 of 12 last);
+    margin: 0 auto;
+  }
+  .ymap-block {
+    @include rem(margin-bottom, 20px);
+    @include span(6 of 12);
+    display: block;
+    .view-content {
+      @include rem(max-width, 270px);
+      @include rem(max-height, 270px);
+      overflow: hidden;
+      margin: 0 auto;
+    }
+    .view-footer {
+      @include rem(margin-bottom, 40px);
+      @include rem(margin-top, 60px);
+      a {
+        @include main-btn;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        max-width: 230px;
+      }
+    }
+  }
+  .random-tasks {
+    @include span(6 of 12);
+    clear: both;
+    margin-top: 0;
+    max-width: 100%;
+    text-align: center;
+  }
+}
+
+@include breakpoint($max_device_width) {
+  .ymap-block,
+  .random-tasks,
+  .all-cat-block,
+  .block-multiblock {
+    @include span(12 of 12);
+    clear: both;
+    margin-top: 0;
+  }
+  .page-blog .all-cat-block {
+    margin-bottom: 0;
+  }
+  .all-cat-block li.leaf a:hover,
+  .all-cat-block .form-type-bef-link a:hover {
+    color: $btn-color;
+  }
+  .static-block-performer:not(.how) {
+    @include rem(margin-bottom, 50px);
+    @include rem(margin-top, 50px);
+    width: 100%;
+  }
+  .random-tasks {
+    @include rem(margin-top, 20px);
+  }
+}
+

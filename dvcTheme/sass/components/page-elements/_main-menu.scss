@@ -1,0 +1,246 @@
+.main-menu {
+  .menu {
+    .menu {
+      display: none;
+    }
+  }
+}
+.dd-d {
+  display: none;
+}
+.dd-d,
+.dd-m {
+  background: url('../images/icons/burder-menu.svg') no-repeat right;
+  background-size: contain;
+  height: 31px;
+  float: right;
+  position: relative;
+  width: 50px;
+  z-index: 9;
+  &.active {
+    background: url('../images/icons/burder-menu-active.svg') no-repeat right;
+    background-size: contain;
+  }
+  &:hover {
+    cursor: pointer;
+  }
+}
+.log-reg,
+.main-menu {
+  @include rem(margin-right, 70px);
+  a {
+    font-weight: $light;
+  }
+}
+.log-reg li,
+.main-menu li {
+  @include rem(margin-bottom, 9px);
+  &.expanded {
+    margin-bottom: 0;
+  }
+}
+.log-reg li,
+.main-menu li,
+.log-reg,
+.main-menu,
+.drop-menu {
+  clear: both;
+  float: right;
+}
+.drop-menu {
+  @include rem(margin-right, 32px);
+  @include rem(margin-top, 44px);
+  text-align: left;
+  li {
+    @include rem(margin-bottom, 13px);
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+  a {
+    font-weight: $normal;
+    text-transform: uppercase;
+  }
+}
+
+/* User account */
+.user-aq {
+  .to-profile {
+    color: $white;
+    &:hover {
+      color: $btn-color;
+    }
+  }
+  .views-field-field-avatar {
+    @include rem(margin-right, 30px);
+    img {
+      @include border-radius(50%);
+    }
+  }
+  .user-picture img {
+    @include rem(height, 40px);
+    @include rem(width, 40px);
+  }
+  .views-field-nothing a {
+    @include rem(height, 20px);
+    @include rem(width, 20px);
+    background: url('../images/icons/logout.svg') no-repeat;
+    background-size: cover;
+    display: block;
+    font-size: 0;
+  }
+  .views-field-field-name,
+  .views-field-name {
+    @include rem(margin-right, 10px);
+    display: none;
+  }
+  .views-field-nothing,
+  .views-field-field-name,
+  .views-field-name {
+    @include rem(margin-top, 7px);
+  }
+}
+
+@include breakpoint(0 1023px) {
+  .drop-menu {
+    display: block !important;
+  }
+  .desc-drop {
+    display: none;
+  }
+}
+
+@include breakpoint($mid_device_width) {
+  .user-aq {
+    .views-field-field-name,
+    .views-field-name {
+      display: block;
+    }
+  }
+}
+
+@include breakpoint($min_width) {
+  .dd-d {
+    display: block;
+  }
+  .drop-menu,
+  .dd-m {
+    display: none;
+  }
+  .user-aq {
+    .views-field-field-name,
+    .views-field-name {
+      span {
+        @include rem(max-width, 105px);
+        display: inline-block;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+    }
+  }
+  /* All */
+  .main-menu .expanded > .menu,
+  .drop-menu .content {
+    @include rem(width, 300px);
+    background: rgba($white, .8);
+  }
+  .main-menu .expanded > .menu,
+  .drop-menu {
+    position: absolute;
+    text-align: center;
+    top: 100%;
+    right: 0;
+    &:before {
+      @include rem(right, 20px);
+      @include rem(top, -25px);
+      content: '';
+      display: block;
+      width: 0;
+      height: 0;
+      position: absolute;
+      border-left: 25px solid transparent;
+      border-right: 25px solid transparent;
+      border-bottom: 25px solid rgba($white, .8);
+    }
+  }
+  /* Main-menu */
+  .main-menu .expanded {
+    position: relative;
+  > .menu {
+      @include rem(margin-top, 25px);
+      @include rem(padding, 25px 7px);
+      a {
+        color: $black;
+        font-weight: 400;
+        text-transform: uppercase;
+      }
+      a:hover {
+        color: $btn-color;
+      }
+      li {
+        margin: 3px 0;
+        width: 100%;
+      }
+    }
+    // Hovered menu
+    .expanded {
+      &:before {
+        content: '';
+        display: none;
+        height: 60px;
+        position: absolute;
+        right: 90%;
+        transform: translateY(-30%);
+        width: 70px;
+      }
+      &:hover::before,
+      &:hover .menu {
+        display: block;
+      }
+      .menu {
+        @include rem(margin-right, 32px);
+        @include rem(top, -28px);
+        @include rem(width, 300px);
+        margin-top: 0;
+        right: 100%;
+        &:before {
+          @include rem(right, -25px);
+          border-bottom: 25px solid transparent;
+          border-left: 25px solid rgba($white, .8);
+          border-right: 0;
+          border-top: 25px solid transparent;
+          top: 13px;
+        }
+      }
+    }
+  }
+  /* Burger */
+  .drop-menu {
+    @include rem(margin, 10px 0 0 0);
+    .content {
+      @include rem(padding, 37px 30px);
+    }
+    li {
+      @include rem(margin-top, 28px);
+      &.first {
+        margin-top: 0;
+      }
+    }
+    a {
+      color: $black;
+      &:hover {
+        color: $btn-color;
+      }
+    }
+  }
+}
+@include breakpoint($main_width) {
+  .user-aq {
+    .views-field-field-name,
+    .views-field-name {
+      span {
+        @include rem(max-width, 140px);
+      }
+    }
+  }
+}

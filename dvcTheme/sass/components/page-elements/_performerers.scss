@@ -1,0 +1,127 @@
+.view-perfomerers {
+  @include clr;
+  .views-row {
+    @include clr;
+    @include rem(margin-bottom, 40px);
+    clear: both;
+    position: relative;
+    width: 100%;
+  }
+  .views-field-field-avatar {
+    @include border-radius(50%);
+    @include rem(height, 80px);
+    @include rem(margin-bottom, 15px);
+    @include rem(width, 80px);
+    float: left;
+    overflow: hidden;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .views-field-field-rate,
+  .views-field-field-name {
+    @include rem(margin-left, 92px);
+  }
+  .views-field-field-name {
+    .field-content:after {
+      content: '';
+      display: block;
+      height: 26px;
+      width: 100%;
+    }
+    .field-content a {
+      @include rem(line-height, 18px);
+      @include rem(margin-bottom, 8px);
+      color: $black;
+      float: left;
+      font-weight: $bold;
+      text-decoration: none;
+    }
+  }
+  .views-field-field-name {
+    .field-content {
+      @include rem(font-size, 18px);
+      color: $black;
+    }
+  }
+  .views-field-field-rate {
+    .field-content {
+      @include rem(font-size, 20px);
+      @include rem(margin-top, 5px);
+      color: $btn-color;
+      font-weight: $bold;
+    }
+  }
+  .views-field-field-star {
+    @include rem(top, 60px);
+    position: absolute;
+    right: 0;
+    .field-content {
+    }
+  }
+  .views-field-field-about-me,
+  .views-field-login {
+    clear: both;
+    .field-content {
+      @include rem(line-height, 18px);
+      color: $main-text-color;
+      font-weight: $light;
+    }
+  }
+  .views-field-login {
+    .field-content {
+      @include rem(font-size, 14px);
+    }
+    .current-on-site {
+      color: $btn-color;
+      font-weight: 700;
+    }
+  }
+  .views-field-field-about-me {
+    @include rem(margin-top, 8px);
+    .field-content {
+      @include rem(font-size, 16px);
+    }
+  }
+}
+
+@include breakpoint($mid_device_width) {
+  .view-perfomerers {
+    .views-row {
+      position: relative;
+    }
+    .views-field-field-avatar {
+      @include rem(margin-bottom, 30px);
+    }
+    .views-field-field-name {
+      @include rem(margin-left, 112px);
+      .field-content a:hover {
+        color: $btn-color;
+        text-decoration: underline;
+      }
+    }
+    .views-field-field-rate {
+      @include rem(margin-left, 112px);
+      .field-content {
+        @include rem(margin-top, -28px);
+        float: right;
+        width: auto;
+      }
+    }
+    .views-field-field-star {
+      @include rem(top, 95px);
+      left: 0;
+      margin-left: 0;
+      right: auto;
+      .field-content {
+        float: none;
+      }
+    }
+    .views-field-field-about-me,
+    .views-field-login {
+      @include rem(margin-left, 112px);
+      clear: right;
+    }
+  }
+}

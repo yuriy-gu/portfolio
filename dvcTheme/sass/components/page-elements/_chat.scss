@@ -1,0 +1,79 @@
+
+.node-chat {
+  @include span (8 of 12);
+  text-align: center;
+  .comment-wrapper {
+    max-width: 100%;
+    //styles
+    .comment-by-node-author,
+    .this-user,
+    .title.comment-form {
+      clear: both;
+    }
+    .comment-by-node-author,
+    .this-user {
+      @include comment-new;
+      border-radius: 20px;
+      text-decoration: none;
+      max-width: 31.25rem;
+      // creator name
+      span {
+        @include span (3 of 12 last);
+        @include rem(margin, 17px 20px 9px 0);
+        text-align: right;
+      }
+      a {
+        text-decoration: none;
+      }
+    }
+    .comment-by-node-author {
+      float: right;
+    }
+    .this-user {
+      float: left;
+      width: 100%;
+    }
+    // post date styles
+    .field-name-post-date {
+      @include span (7 of 12 first);
+      @include rem(margin, 17px 0 9px 20px);
+      text-align: left;
+    }
+    // post date body styles
+     .field-name-comment-body {
+      text-align: center;
+      &:before {
+        clear:both;
+        content: '';
+        display: block;
+      }
+      // user text-block styles
+      .field-items .even{
+        @include rem(margin, 5px 20px 20px);
+        background: $background-commentBlock;
+        border-radius: 10px;
+        padding: 10px;
+        position: relative;
+        text-align: justify;
+        //triangle
+        &:before {
+          border-bottom: 10px solid $triangle-color;
+          border-left: 10px solid transparent;
+          border-right: 10px solid transparent;
+          content: '';
+          display: block;
+          height: 0;
+          position: absolute;
+          right: 15px;
+          top: -10px;
+          width: 0;
+        }
+      }
+    }
+  }
+}
+
+
+
+
+

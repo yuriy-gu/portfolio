@@ -1,0 +1,293 @@
+@font-face {
+  font-family: 'HelveticaNeueLTPro-Th';
+  src: url("../fonts/HelveticaNeueLTPro-Th/HelveticaNeueLTPro-Th.eot");
+  src: url("HelveticaNeueLTPro-Th.eot?#iefix") format("embedded-opentype"), url("../fonts/HelveticaNeueLTPro-Th/HelveticaNeueLTPro-Th.woff") format("woff"), url("../fonts/HelveticaNeueLTPro-Th/HelveticaNeueLTPro-Th.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+/*logotype*/
+/*navigation*/
+/*main*/
+/*slider*/
+/*left text block*/
+body {
+  background: url(../img/main_bg.png);
+  font: 100%/1.8 Verdana, Arial, sans-serif
+  /*/header*/
+  /*main content*/
+  /*/main*/
+  /*footer*/
+  /*/footer*/ }
+  body header {
+    margin-top: 40px
+    /*logotype*/
+    /*/logo*/
+    /*navigation*/
+    /*/nav*/ }
+    body header .logo {
+      line-height: 5px;
+      text-align: right;
+      font-family: 'HelveticaNeueLTPro-Th';
+      margin-top: 10px; }
+      body header .logo .logo_text {
+        font-size: 3.6rem;
+        color: #b4b4b4;
+        letter-spacing: -2px;
+        text-shadow: 0px 0px 25px black; }
+      body header .logo .logo_text em {
+        font-size: 3.6rem;
+        font-style: normal;
+        color: #00b4ff; }
+      body header .logo .slogan {
+        font: 1.1rem Verdana;
+        color: #b3b3b3; }
+    body header .nav {
+      float: right;
+      margin-right: -3%
+      /*/li*/ }
+      body header .nav li {
+        line-height: 15px; }
+        body header .nav li a {
+          color: #b3b3b3;
+          font-size: 1.2rem;
+          text-transform: uppercase; }
+      body header .nav .active a {
+        background: -webkit-linear-gradient(#0f8bbe 10%, #0eb8ff 70%);
+        background: linear-gradient(#0f8bbe 10%, #0eb8ff 70%);
+        border-radius: 25px;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75); }
+      body header .nav a:hover,
+      body header .nav a:focus {
+        background: -webkit-linear-gradient(#0f8bbe 10%, #0eb8ff 70%);
+        background: linear-gradient(#0f8bbe 10%, #0eb8ff 70%);
+        border-radius: 25px;
+        box-shadow: 2px 2px 1px rgba(0, 0, 0, 0.75);
+        color: #fff; }
+  body .main {
+    background: rgba(255, 255, 255, 0.1);
+    margin-top: 40px;
+    padding: 20px 30px
+    /*/main_bg*/
+    /*text_block*/
+    /*/text_block*/
+    /*main_footer*/
+    /*/main_footer*/ }
+    body .main .main_bg {
+      background: -webkit-linear-gradient(#fff, #ececec);
+      background: linear-gradient(#fff, #ececec);
+      padding: 15px
+      /*/carousel*/ }
+      body .main .main_bg .carousel_border {
+        margin: 0;
+        background: #fff;
+        border: 1px solid #e4e4e4;
+        padding: 5px; }
+      body .main .main_bg .carousel {
+        /*/mosaic_bg*/
+        /*/carousel-inner*/ }
+        body .main .main_bg .carousel .mosaic_bg {
+          background: url(../img/mosaic.png);
+          background-size: cover;
+          display: block;
+          opacity: .25;
+          position: absolute;
+          top: 0;
+          left: 0;
+          height: 100%;
+          width: 100%;
+          z-index: 1; }
+        body .main .main_bg .carousel .carousel-inner {
+          background: -webkit-linear-gradient(#0f8bbe 10%, #0eb8ff 70%);
+          background: linear-gradient(#0f8bbe 10%, #0eb8ff 70%)
+          /*/item*/ }
+          body .main .main_bg .carousel .carousel-inner .left, body .main .main_bg .carousel .carousel-inner .right {
+            background: none;
+            margin: 0; }
+          body .main .main_bg .carousel .carousel-inner .item {
+            /*/carousel-caption*/ }
+            body .main .main_bg .carousel .carousel-inner .item img {
+              height: 157px;
+              width: 227px; }
+            body .main .main_bg .carousel .carousel-inner .item .carousel-caption {
+              text-align: left;
+              top: 0;
+              left: 260px;
+              right: 2%; }
+              body .main .main_bg .carousel .carousel-inner .item .carousel-caption h1 {
+                font-size: 2.4rem;
+                color: #fff;
+                text-shadow: 1px 1px 20px rgba(0, 0, 0, 0.21);
+                text-transform: uppercase; }
+              body .main .main_bg .carousel .carousel-inner .item .carousel-caption p {
+                font-size: 1.2em;
+                color: #fff;
+                margin-top: 15px; }
+          body .main .main_bg .carousel .carousel-inner .active, body .main .main_bg .carousel .carousel-inner .next, body .main .main_bg .carousel .carousel-inner .prex {
+            padding: 25px 15px; }
+        body .main .main_bg .carousel .carousel-control {
+          border: 3px solid #fff;
+          border-radius: 100px;
+          font-size: 10px;
+          top: 45%;
+          height: 36px;
+          width: 36px;
+          opacity: 1;
+          z-index: 10; }
+          body .main .main_bg .carousel .carousel-control .glyphicon {
+            color: #8c8c8c;
+            top: 30%;
+            left: 35%; }
+        body .main .main_bg .carousel .left {
+          left: -1.4%; }
+        body .main .main_bg .carousel .right {
+          right: -1.4%; }
+        body .main .main_bg .carousel .left,
+        body .main .main_bg .carousel .right {
+          background: -webkit-linear-gradient(#dfdfdf, white);
+          background: linear-gradient(#dfdfdf, white); }
+    body .main .text_block {
+      margin-top: 25px
+      /*/left_side*/ }
+      body .main .text_block h2 {
+        font-size: 2.4rem;
+        color: #0b81be;
+        margin-bottom: 15px; }
+      body .main .text_block p {
+        font-size: 1.2rem;
+        color: #858585;
+        margin-bottom: 20px; }
+      body .main .text_block em {
+        color: #424242; }
+      body .main .text_block .left_side {
+        border-right: 1px solid #e4e4e4
+        /*/ul*/ }
+        body .main .text_block .left_side ul {
+          list-style: none;
+          padding-left: 5px
+          /*/li*/ }
+          body .main .text_block .left_side ul li a {
+            font-size: 1.2rem;
+            font-style: italic;
+            color: #858585;
+            border-bottom: 1px solid #e4e4e4;
+            padding-bottom: 5px;
+            padding-left: 10px;
+            position: relative; }
+          body .main .text_block .left_side ul li a:after {
+            display: block;
+            content: '';
+            width: 7px;
+            height: 8px;
+            background: url(../img/list_arrow.png);
+            position: absolute;
+            top: 3px;
+            left: 0; }
+          body .main .text_block .left_side ul li .border {
+            border: none; }
+    body .main .main_footer {
+      background: #fff;
+      margin: 25px 0 5px;
+      padding: 3px; }
+      body .main .main_footer .main_footer_bg {
+        background: -webkit-linear-gradient(#fff, #f7f7f7);
+        background: linear-gradient(#fff, #f7f7f7); }
+        body .main .main_footer .main_footer_bg .footer_border {
+          border-right: 1px solid #ececec; }
+        body .main .main_footer .main_footer_bg .footer_text {
+          padding: 30px 15px 25px 10px; }
+        body .main .main_footer .main_footer_bg img {
+          float: left;
+          width: 46px;
+          height: 46px;
+          margin-right: 15px; }
+        body .main .main_footer .main_footer_bg h3 {
+          font-size: 1.2rem;
+          color: #858585; }
+  body footer {
+    background: rgba(0, 0, 0, 0.3);
+    margin-top: 50px;
+    padding-top: 25px
+    /*/twitter*/
+    /*footer navigation*/
+    /*/footer navigation*/
+    /*copyright*/ }
+    body footer .twitter {
+      position: relative;
+      margin-left: 42px; }
+      body footer .twitter a {
+        font-size: 2.4rem;
+        color: #fff; }
+      body footer .twitter a:before {
+        background: url(../img/twitter_icon.png) no-repeat;
+        content: '';
+        display: block;
+        width: 46px;
+        height: 51px;
+        position: absolute;
+        top: 0;
+        left: -55px; }
+      body footer .twitter p {
+        font-size: 1.2rem;
+        color: #727272;
+        line-height: 0; }
+      body footer .twitter .speech_bubble {
+        background: rgba(0, 0, 0, 0.5);
+        border-radius: 15px;
+        padding: 20px;
+        text-align: justify;
+        position: relative;
+        top: -7px;
+        left: -20px;
+        height: 125px;
+        width: 252px; }
+        body footer .twitter .speech_bubble p {
+          font-size: 1.2rem;
+          font-weight: normal;
+          line-height: 18px;
+          color: #858585; }
+        body footer .twitter .speech_bubble em {
+          color: #0b81be; }
+      body footer .twitter .speech_bubble:before {
+        background: url(../img/speech_bubble_triangle.png);
+        content: '';
+        width: 20px;
+        height: 19px;
+        display: block;
+        position: absolute;
+        left: 10px;
+        top: -18px; }
+    body footer .nav {
+      float: right;
+      margin-right: -3%
+      /*/li*/ }
+      body footer .nav li a {
+        font-size: 1.1rem;
+        color: #b3b3b3;
+        text-transform: uppercase;
+        padding: 0;
+        margin-left: 30px; }
+        body footer .nav li a:focus, body footer .nav li a:hover {
+          background: none; }
+    body footer .logo {
+      line-height: 22px;
+      text-align: right;
+      font-family: 'HelveticaNeueLTPro-Th';
+      margin-right: -2%;
+      margin-top: 50px; }
+      body footer .logo .copyright {
+        font-size: 1.1rem;
+        color: #fff;
+        margin-bottom: 20px; }
+      body footer .logo .logo_text {
+        font-size: 3.6rem;
+        color: #b4b4b4;
+        letter-spacing: -2px;
+        text-shadow: 0px 0px 25px black; }
+      body footer .logo .logo_text em {
+        font-size: 3.6rem;
+        font-style: normal;
+        color: #00b4ff; }
+      body footer .logo .slogan {
+        font: 1.1rem Verdana;
+        color: #b3b3b3; }
+
+/*/body*/

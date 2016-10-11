@@ -1,0 +1,193 @@
+.all-tasks-text {
+  @include main-container;
+  @include rem(padding-top, 35px);
+  .field-content {
+    @include rem(font-size, 16px);
+    font-weight: $light;
+  }
+}
+.all-tasks-view {
+  .view-header {
+    .field-content {
+      font-weight: $light;
+    }
+  }
+  > .view-content {
+    @include rem(margin-top, 90px);
+    .views-row {
+      @include rem(margin-bottom, 71px);
+      border-style: solid;
+      border-width: 1px;
+      border: 1px solid $main-text-color;
+      position: relative;
+      @include rem(padding, 17px 11px 11px 11px);
+    }
+  }
+  .views-field-field-avatar {
+    @include border-radius(50%);
+    @include rem(height, 50px);
+    @include rem(top, -40px);
+    @include rem(width, 50px);
+    left: 0;
+    overflow: hidden;
+    position: absolute;
+    img {
+      height: 100%;
+      width: 100%;
+    }
+  }
+  .views-field-field-surname {
+    display: none;
+  }
+  .views-field-field-name {
+    @include rem(left, 64px);
+    @include rem(margin-bottom, 9px);
+    bottom: 100%;
+    position: absolute;
+    a,
+    span {
+      @include rem(font-size, 16px);
+      color: $black;
+      font-weight: $normal;
+      text-decoration: none;
+    }
+  }
+  .views-field-nothing {
+    a {
+      @include rem(font-size, 18px);
+      @include rem(line-height, 18px);
+      color: $black;
+      display: inline-block;
+      font-weight: $bold;
+      max-width: 70%;
+      text-decoration: none;
+    }
+  }
+  .views-field-field-city-main {
+    background: url('../images/icons/loc.png');
+    .field-content {
+      color: $main-text-color;
+      font-weight: $light;
+    }
+  }
+  .views-field-created {
+    background: url('../images/icons/clock.png');
+    .field-content {
+      color: $black;
+      font-style: italic;
+      font-weight: $bold;
+    }
+  }
+  .at-rub {
+    @include rem(font-size, 20px);
+    color: $btn-color;
+    float: right;
+    font-weight: $bold;
+    max-width: 30%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+  .views-field-field-city-main,
+  .views-field-created {
+    @include rem(margin-top, 5px);
+    @include rem(padding-left, 24px);
+    background-position: 0 50%;
+    background-repeat: no-repeat;
+    .field-content {
+      @include rem(font-size, 14px);
+      @include rem(line-height, 18px);
+    }
+  }
+}
+
+@include breakpoint($mid_device_width) {
+  .all-tasks-view {
+  > .view-content .views-row {
+      &:nth-child(odd):before {
+        @include rem(width, 23px);
+        @include rem(left, -33px);
+        background: url('../images/icons/ar-left.png') no-repeat;
+        background-size: 100% 100%;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+      &:nth-child(odd) {
+        @include rem(margin-left, 140px);
+      }
+      &:nth-child(odd) .views-field-field-avatar {
+        @include rem(left, -140px);
+        @include rem(margin-top, -55px);
+        top: 50%;
+      }
+      &:nth-child(odd) .views-field-field-name {
+        @include rem(left, -140px);
+        @include rem(margin-top, 55px);
+        @include rem(width, 90px);
+        bottom: auto;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(even):before {
+        @include rem(right, -33px);
+        @include rem(width, 23px);
+        background: url('../images/icons/ar-right.png') no-repeat;
+        background-size: 100% 100%;
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        top: 0;
+      }
+      &:nth-child(even) .views-field-field-avatar {
+        @include rem(right, -140px);
+        @include rem(margin-top, -55px);
+        left: auto;
+        top: 50%;
+      }
+      &:nth-child(even) .views-field-field-name {
+        @include rem(right, -140px);
+        @include rem(margin-top, 55px);
+        @include rem(width, 90px);
+        bottom: auto;
+        left: auto;
+        text-align: center;
+        top: 50%;
+        transform: translateY(-50%);
+      }
+      &:nth-child(even) {
+        @include rem(margin-right, 140px);
+      }
+    }
+    .views-field-field-avatar {
+      @include rem(height, 90px);
+      @include rem(width, 90px);
+    }
+  }
+}
+
+@include breakpoint($max_device_width) {
+  .all-tasks-view {
+    .views-field-field-avatar:hover + .views-field-field-name {
+      a,
+      span {
+        color: $btn-color;
+      }
+    }
+    .views-field-field-name {
+      a:hover,
+      span:hover {
+        color: $btn-color;
+      }
+    }
+    .views-field-nothing a {
+      &:hover {
+        color: $btn-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}

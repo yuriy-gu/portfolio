@@ -1,0 +1,60 @@
+/* ========== PRODUCT INFO (overlay) ==========*/
+	.overlay {
+		background: url(../img/overlay.png);
+		position: fixed;
+		top: 0;
+		height: 100%;
+		width: 100%;
+		z-index: 999;
+		display: none;
+			dialog {
+			 	background: #fff;
+			 	display: block;
+			 	position: fixed;
+			 	top: 50%;
+			 	left: 50%;
+			 	margin: 0 auto;
+			 	margin-left: -350px;
+			 	padding: 20px;
+			    transform: translateY(-50%);
+			 	width: 700px;
+					img {
+					float: left;
+					margin-right: 15px;
+					margin-bottom: 15px;
+					text-align: justify;
+					} /* /dialog_img */
+				form {
+				 	margin: 10px 0;
+				 	float: left;
+				}
+				.timer {
+				 	float: right;
+						.box {
+						 	font-size: 30px;
+						 	border: 3px outset #D8C9C9;
+						 	border-radius: 5px;
+						 	box-shadow: 0px 0px 6px 1px #000000 inset;
+						 	padding: 10px 5px;
+						 	position: relative;
+								&:before {
+								 	content: "";
+								 	display: block;
+								 	position: absolute;
+								 	left: 0;
+								 	top: 50%;
+								 	height: 1px;
+								 	width: 100%;
+								 	background: #fff;
+								}
+						} /* /box */
+						.q {
+						 	border: none;
+						 	box-shadow: none;
+								&:before {
+							 	display: none;
+							 }
+						}
+				} /* /timer*/
+			} /* /dialog */
+	} /* /overlay*/

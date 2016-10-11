@@ -1,0 +1,400 @@
+.page-profile-myprofile {
+  .contextual-links-region {
+    @include main-container;
+  }
+  // Titles
+  .social-account,
+  .group-personal-data,
+  .image-widget,
+  .field-name-field-term-services > .form-item > label {
+    @include rem(margin-bottom, 15px);
+  }
+  .field-name-field-term-services > .form-item > label,
+  .group-personal-data + .required-fields h3,
+  .group-personal-data h3,
+  .field-name-field-social-account > .form-item > label,
+  .profile-rules-text h2 {
+    @include rem(font-size, 25px);
+    color: $black;
+    font-weight: 400;
+  }
+  //  ============= SOCIAL ACCOUNT ===================
+  .field-name-field-social-account {
+    @include rem(margin-top, 35px);
+    label span {
+      display: none;
+    }
+    .form-checkboxes {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      div[class*="Mailru"] input:before {
+        background-image: url('../images/icons/mail-1.png');
+        background-size: 21px 21px;
+      }
+      div[class*="Twitter"] input:before {
+        background-image: url('../images/icons/tw-1.png');
+        background-size: 22px 18px;
+      }
+      div[class*="Facebook"] input:before {
+        background-image: url('../images/icons/fb-1.png');
+        background-size: 13px 24px;
+      }
+      div[class*="Odnoklassniki"] input:before {
+        background-image: url('../images/icons/ok-1.png');
+        background-size: 14px 23px;
+      }
+      div[class*="Google"] input:before {
+        background-image: url('../images/icons/gplus-1.png');
+        background-size: 21px 22px;
+      }
+      div[class*="Vkontakte"] input:before {
+        background-image: url('../images/icons/vk-1.png');
+        background-size: 26px 14px;
+      }
+    }
+    .form-type-checkbox {
+      @include rem(margin, 5px);
+      @include rem(padding-left, 5px);
+      @include rem(padding-right, 5px);
+      position: relative;
+      label a {
+        @include rem(height, 40px);
+        @include rem(width, 100px);
+        display: block;
+        position: absolute;
+        top: 20px;
+        span {
+          display: none;
+        }
+      }
+    }
+    .form-type-checkbox input {
+      @include rem(margin-bottom, 37px);
+      @include rem(margin-right, 100px);
+      &:before {
+        @include border-radius(10px);
+        @include rem(height, 38px);
+        @include rem(padding, 10px 37px 14px 37px);
+        @include rem(width, 100px);
+        background: $btn-hover-color center no-repeat;
+        border: none;
+        box-shadow: none;
+      }
+      &:checked + label {
+        display: block;
+      }
+      &:checked::before {
+        background-color: $select-drop-bg;
+      }
+    }
+    .description {
+      display: none;
+    }
+  }
+  // ========== PERSONAL DATA ==============
+  .group-personal-data {
+    .field-widget-text-textarea,
+    .group-left-column,
+    .group-right-group,
+    .field-name-field-gender {
+      @include rem(max-width, 270px);
+      margin: 0 auto;
+    }
+    .form-checkboxes,
+    .field-type-phone {
+      margin: 0  auto;
+      width: 60%;
+    }
+    textarea,
+    input {
+      max-width: 100%;
+    }
+    textarea {
+      @include rem(max-height, 110px);
+      overflow-y: scroll;
+    }
+  }
+  // FIELD BIRTHDAY ================================
+  .field-name-field-birthday {
+    @include rem(max-width, 290px);
+    @include rem(margin-top, 30px);
+    .image-widget-data {
+      @include rem(width, 145px);
+    margin: 0 auto;
+    }
+    div[class*="value-month"] {
+      clear: both;
+    }
+    .date-no-float {
+      width: 100%;
+    }
+    .date-padding {
+      padding: 0;
+    }
+    .fieldset-wrapper {
+      float: right;
+      text-align: right;
+      width: 100%;
+    }
+    legend {
+      @include rem(margin, 30px 0 -48px 25px);
+      float: left;
+      span {
+        color: $black;
+        font-weight: $bold;
+      }
+    }
+    .form-type-select {
+      float: right;
+    }
+    select {
+      @include rem(margin, 5px);
+      @include rem(width, 100px);
+    }
+  }
+  // GENDER ===============================
+  .field-name-field-gender .form-type-radios {
+    align-items: baseline;
+    display: flex;
+    justify-content: center;
+    .form-radios {
+      display: inherit;
+      .form-type-radio {
+        @include rem (margin-left, 10px);
+        input[type="radio"] {
+          @include rem (margin, 0 20px 15px 0);
+        }
+      }
+    }
+  }
+  // PHOTO ===============================
+  .field-name-field-avatar {
+    @include rem(width, 145px);
+    margin: 0 auto;
+    text-align: center;
+    .image-widget {
+      @include rem (margin-top, 25px);
+      .image-preview {
+        float: none;
+        img {
+          border-radius: 50px;
+          height: 100px;
+          margin: 0 auto;
+          width: 100px;
+        }
+      }
+    }
+    .image-widget-data {
+      float: none;
+      span {
+        display: none;
+      }
+    }
+  }
+  //  ================= TERM SERVICES ===============
+  .field-name-field-term-services {
+    @include container;
+    label span{
+      display: none;
+    }
+    .form-type-checkbox-tree {
+      width: 100%;
+      .term-reference-tree-level > li > div {
+        margin-left: 40px;
+        margin-top: 10px;
+      }
+      .term-reference-tree-level li > ul > li > div {
+        margin-top: 10px;
+        text-align: left;
+      }
+    }
+    .term-reference-tree-level li {
+      clear: both;
+      position: relative;
+      .term-reference-tree-button {
+        @include rem(width, 10px);
+        background: url('../images/icons/arr-up.png') no-repeat center;
+        cursor: pointer;
+        left: -35px;
+        position: absolute;
+        top: 2px;
+        &.term-reference-tree-collapsed {
+          background: url('../images/icons/arr-down.png') no-repeat center;
+        }
+      }
+    }
+    input {
+      left: 25px;
+      position: absolute;
+      top: 12px;
+    }
+    label {
+      display: block;
+      margin-left: 10px;
+    }
+    .term-reference-tree-level li > ul > li > div > input {
+      position: absolute;
+      top: 12px;
+    }
+    .no-term-reference-tree-button {
+      display: none;
+    }
+  }
+  .third-column,
+  .group-personal-data {
+    // labels
+    + .required-fields label,
+    .field-name-field-gender > .form-item > label,
+    .field-name-field-avatar .form-type-managed-file > label,
+    .field-name-field-birthday legend {
+      @include rem(font-size, 14px);
+      color: $black;
+      font-weight: $bold;
+    }
+  }
+  .term-reference-track-list-container {
+    padding-left: 0px;
+  }
+  // ============== min-width=768 ================
+  @include breakpoint ($mid_device_width) {
+    .group-personal-data {
+      @include span (12 of 12);
+        .field-widget-text-textarea,
+        .group-left-column,
+        .group-right-group,
+        .field-name-field-gender {
+          max-width: none;
+        }
+      .field-name-field-about-me,
+      .field-name-field-gender {
+        width: 85%;
+      }
+      .group-left-column {
+        @include rem(margin-right, 25px);
+        @include rem(margin-left, 55px);
+        float: left;
+        width: 41%;
+      }
+      .group-right-group {
+        float: left;
+        width: 41%;
+        .left-block,
+        .right-block {
+          display: none;
+        }
+      }
+      .field-name-field-birthday {
+        @include rem(max-width, 605px);
+        clear: both;
+        .form-type-date-select {
+          margin-right: 5%;
+        }
+        div[class*="value-month"] {
+          clear: none;
+        }
+        legend {
+          margin-left: 10%;
+          margin-right: 0;
+        }
+        .date-combo  {
+          width: 100%;
+        }
+      }
+      .form-type-radios {
+        justify-content: flex-start;
+      }
+      .field-type-image {
+        text-align: left;
+        width: 85%;
+        .image-preview {
+          float: left;
+        }
+        .image-widget-data {
+          @include rem(width, 250px);
+          float: left;
+          @include rem(margin-left, 15px);
+        }
+      }
+    }
+    .field-name-field-term-services {
+      .term-reference-tree-level > li > div {
+        margin-left: 0 !important;
+        text-align: right;
+        width: 50%;
+      }
+      .term-reference-tree-button {
+        left: 52% !important;
+      }
+      input {
+        left: 56%;
+      }
+      // inside list
+      .term-reference-tree-level li > ul > li > div {
+        float: right;
+        margin-left: 0;
+        width: 40%
+      }
+      .term-reference-tree-level li > ul > li > div > input {
+        left: 54.9%;
+      }
+    }
+  }
+  // ============== min-width=960 ================
+  @include breakpoint($max_device_width) {
+    .form-checkboxes {
+      justify-content: space-between !important;
+      width: 100%;
+    }
+    .group-personal-data {
+      @include container;
+      .field-name-field-about-me {
+        @include span(4 of 12 last);
+      }
+      .group-left-column {
+        @include span(4 of 12 first);
+        margin-left: 0;
+      }
+      .group-right-group {
+        @include span(4 of 12);
+      }
+      .field-name-field-birthday {
+        @include span(6 of 12 first);
+        legend {
+          margin-left: 0;
+        }
+        .form-type-date-select {
+          margin-right: 0;
+        }
+      }
+      .field-name-field-gender {
+        @include span(4 of 12);
+        margin-top: 10px;
+      }
+      .field-name-field-avatar {
+        clear: both;
+        width: 100%;
+      }
+    }
+    .field-type-phone {
+      width: 100%;
+    }
+    .field-name-field-term-services {
+      .term-reference-tree-level > li > div {
+        margin-left: -25px !important;
+      }
+      .term-reference-tree-button {
+        left: 51.5% !important;
+      }
+      input {
+        left: 51.5%;
+      }
+      .term-reference-tree-level li > ul > li > div {
+        width: 45%;
+      }
+      .term-reference-tree-level li > ul > li > div > input {
+        left: 50.4%;
+      }
+    }
+  }
+}

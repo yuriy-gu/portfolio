@@ -1,0 +1,115 @@
+.slider-front {
+  outline: none;
+  position: relative;
+  .view-content {
+    opacity: 0;
+  }
+  * {
+    outline: none;
+  }
+  .panels-flexible-row-inside {
+    max-width: 100%;
+    padding: 0;
+  }
+  .field-content {
+    @include rem(height, 325px);
+    overflow: hidden;
+    width: 100%;
+  }
+  img {
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+  .slyder-block {
+    // @include rem(padding, 0 15px);
+    @include rem(top, 67px);
+    position: absolute;
+    text-align: center;
+    width: 100%;
+    .pane-content {
+      @include main-container;
+    }
+  }
+  .main-slider-text {
+    @include rem(font-size, 22px);
+    @include rem(line-height, 48px);
+    color: $white;
+    text-transform: uppercase;
+    span {
+      @include rem(font-size, 22px);
+    }
+  }
+  .sub-slider-text {
+    @include rem(font-size, 14px);
+    @include rem(line-height, 24px);
+    @include rem(margin-bottom, 15px);
+    color: $select-drop-bg;
+    font-style: italic;
+    span {
+      @include rem(font-size, 14px);
+    }
+  }
+  .main-btn {
+    @include main-btn;
+    @include rem(font-size, 20px);
+    @include rem(max-width, 290px);
+    background: transparent;
+    border: 1px solid $white;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    &:hover {
+      background: transparent;
+    }
+  }
+  .new-line {
+    display: block;
+  }
+}
+@include breakpoint($mid_device_width) {
+  .slider-front {
+    .slyder-block {
+      @include rem(top, 149px);
+    }
+    .field-content {
+      @include rem(height, 600px);
+    }
+    .main-slider-text {
+      @include rem(font-size, 50px);
+      @include rem(line-height, 72px);
+      span {
+        @include rem(font-size, 50px);
+      }
+    }
+    .sub-slider-text {
+      @include rem(font-size, 20px);
+      @include rem(line-height, 24px);
+      @include rem(margin-bottom, 40px);
+      @include rem(margin-top, 5px);
+      span {
+        @include rem(font-size, 20px);
+      }
+    }
+    .main-btn {
+      @include rem(max-width, 343px);
+    }
+  }
+}
+@include breakpoint($min_width) {
+  .slider-front {
+    .slyder-block {
+      @include rem(top, 200px);
+    }
+    .field-content {
+      @include rem(height, 700px);
+    }
+    .main-btn {
+      &:hover {
+        background-color: $white;
+        color: $black;
+      }
+    }
+  }
+}

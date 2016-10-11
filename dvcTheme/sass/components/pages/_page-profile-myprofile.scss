@@ -1,0 +1,11 @@
+.page-profile-myprofile {
+  div[id*='edit-actions'] {
+    input {
+      margin-bottom: 10px;
+      margin-right: 10px;
+    }
+    input:last-child {
+      margin-right: 0;
+    }
+  }
+}
