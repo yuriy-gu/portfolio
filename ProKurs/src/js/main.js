@@ -1,5 +1,7 @@
 $(document).ready(function() {
 
+  //parallax effect
+   $('.s_review').parallax({imageSrc: './img/sliderBg.jpg'});
 
   //header will take all screen (min-width: 640px)
   function hResize() {
@@ -32,8 +34,6 @@ $(document).ready(function() {
     $(".bottom_phone .tab_item").hide().eq($(this).index()).fadeIn()
   }).eq(0).addClass("active");
 
-  //parallax effect
-  $('.s_review').parallax({imageSrc: '../img/middle_bg.jpg'});
 
   //carousel
   $(".owl-carousel").owlCarousel({

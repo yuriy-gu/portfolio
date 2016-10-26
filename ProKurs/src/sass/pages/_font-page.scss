@@ -191,7 +191,7 @@ header {
  ============================= */
  .s_review {
   @include rem(min-height, 500px);
-  background: transparent;
+  // background: transparent;
   .review_item {
     color: #fff;
     text-align: center;
