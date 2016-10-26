@@ -1,0 +1,356 @@
+// header
+header {
+  @include rem(min-height, 700px);
+  @include rem(padding, 32px 0 40px);
+  background: url(../img/top_bg.jpg) top center;
+  background-size: cover;
+  color: $header-color;
+  .logo {
+    @include rem(font-size, 40px);
+    font-family: 'RobotoBold', sans-serif;
+  }
+  .top_phone {
+    text-align: right;
+    .tab_item {
+      @include rem(font-size, 34px);
+    }
+  }
+  // top_description
+  .top_description {
+    @include rem(margin-top, 70px);
+    h2 {
+      @include rem(font-size, 36px);
+      color: $white;
+      text-align: left;
+    }
+  }
+  //tabs_header
+  .tabs_header {
+    @include rem(margin-top, 25px);
+    .tab {
+      @include rem(padding, 15px 15px);
+      background: rgba(255,255,255,.25);
+      float: left;
+      &.active {
+        background: rgba(255,255,255,.6);
+        color: $tabs-active-color;
+      }
+    }
+    .tab_content {
+      @include rem(font-size, 18px);
+      @include rem(padding, 20px);
+      background: rgba(255,255,255,.6);
+      color: $tab-content;
+      font-family: 'RobotoBold', sans-serif;
+      li {
+        @include rem(padding-left, 40px);
+        @include rem(margin, 10px 0);
+        position: relative;
+        text-transform: uppercase;
+        i {
+          @include rem(font-size, 24px);
+          color: #666;
+          position: absolute;
+          left: 0;
+          top: 0;
+          line-height: 26px;
+        }
+      }// /li
+      .button_wrap {
+        text-align: right;
+      }
+      a.tab_btn {
+        background: $btn_tab_bg;
+        transition: 0.2s ease-out;
+        &:hover {
+          background: $btn_tab_bg_hover;
+          text-decoration: none;
+        }
+      }
+    }// /tab_content
+  }// /tabs_header
+} // /header
+
+
+
+/* =============================
+            TIZERS
+ ============================= */
+.s_tizers {
+  @include rem(padding, 40px 0);
+  background: $tizer_bg;
+  color: #003469;
+  font-family: "CleanvertisingLight", sans-serif;
+  text-transform: uppercase;
+  .tizer_img,
+  .tizer_descr {
+    display: inline-block;
+  }
+  .tizer_img i {
+    @include rem(font-size, 50px);
+    @include rem (line-height, 60px);
+    @include rem(margin-right, 5px);
+  }
+  span {
+    @include rem(font-size, 14px);
+    display: block;
+    line-height: 25px;
+  }
+  strong {
+    @include rem(font-size, 25px);
+    display: block;
+    font-weight: normal;
+  }
+  .row>div:nth-child(1) i {
+    @include rem(font-size, 55px);
+    @include rem(margin-right, 15px);
+    font-family: 'RobotoRegular', sans-serif;
+    letter-spacing: -12px;
+  }
+}
+
+
+
+/* =============================
+          CONTENT-FORM
+ ============================= */
+.content_form {
+  @include rem(margin-bottom, 50px);
+  h2 {
+    color: $content_header_text;
+  }
+  .content_items {
+    @include rem(margin-bottom, 20px);
+    .content_items_left {
+      color: $content_icons;
+      i{
+        @include rem(font-size, 90px);
+        @include rem(line-height, 100px);
+      }
+    }
+    .content_items_right {
+      h3 {
+        @include rem(margin-bottom, 5px);
+      }
+    }
+  }
+  form {
+    @include rem(padding, 25px 30px);
+    background: $form_bg;
+    border-radius: 5px;
+    border: 5px solid $green;
+    h2 {
+      @include rem(font-size, 22px);
+      color: $main-text-color;
+      font-family: "RobotoBold", sans-serif;
+      text-transform: uppercase;
+    }
+    label {
+      @include rem(margin-bottom, 20px);
+      @include rem(font-size, 14px);
+      color: $label_color;
+      width: 100%;
+      &.select {
+        background: url(../img/icons/arrow.svg) right 35px no-repeat;
+      }
+      select {
+        background: transparent;
+        -webkit-appearance: none;
+      }
+      input,
+      select {
+        @include rem(line-height, 40px);
+        @include rem(font-size, 20px);
+        border: 1px solid $input_color;
+        box-shadow: 0 0 20px rgba(0,0,0,.1) inset;
+        height: 40px;
+        text-indent: 10px;
+        width: 100%;
+        &:focus {
+          border-radius: 3px;
+          border: none;
+          box-shadow: $green 0 0 0 3px;
+          outline: none;
+        }
+      }
+    }
+    .button_wrap {
+      @include rem(margin, 30px 0 10px);
+      .form_btn {
+        background: $btn_form_bg;
+        text-align: center;
+      }
+    }
+  }
+}
+
+
+
+/* =============================
+             REVIEW
+ ============================= */
+ .s_review {
+  @include rem(min-height, 500px);
+  background: transparent;
+  .review_item {
+    color: #fff;
+    text-align: center;
+    .image_wrap {
+      img {
+        @include rem(height, 165px);
+        @include rem(width, 165px);
+        display: inline-block;
+        border-radius: 50%;
+        border: #585A5B 10px solid;
+      }
+    }
+    .hr {
+      @include rem(width, 80px);
+      background: #CEA380;
+      height: 1px;
+      margin: auto;
+    }
+    p {
+      @include rem(font-size, 15px);
+      @include rem(margin, 25px auto 0);
+      color: $white;
+      float: none;
+    }
+  }
+  //slider navigation arrows
+  .owl-nav > div {
+    @include rem(width, 34px);
+    @include rem(height, 140px);
+    background: url(../img/icons/slider_nav.png);
+    opacity: .6;
+    position: absolute;
+    top: 20px;
+    &:hover {
+      opacity: 1;
+    }
+    &.owl-next {
+      background-position: top right;
+      right: 0;
+    }
+  }
+  // pagination
+  .owl-dots {
+    text-align: center;
+    div {
+      background: #fff;
+      border-radius: 50px;
+      display: inline-block;
+      height: 15px;
+      margin: 5px 4px;
+      opacity: .5;
+      width: 15px;
+      &.active {
+        opacity: .9;
+      }
+    }
+  } // /pagination
+ }
+
+
+
+/* =============================
+              S_BACK
+ ============================= */
+ .s_back {
+  @include rem(padding, 40px 0);
+  background: url(../img/red_bg.jpg) top center;
+  text-align: center;
+  h3 {
+    @include rem(font-size, 26px);
+    @include rem(padding, 10px 10px);
+    @include rem(margin-bottom, 20px);
+    background-color: rgba(255,255,255,.13);
+    border-radius: 10px;
+    color: #fff;
+    text-transform: uppercase;
+    text-align: center;
+  }
+  a {
+    background: $btn_back;
+    color: #000;
+    &:hover {
+      color: $red;
+      opacity: .8;
+      text-decoration: none;
+    }
+  }
+}
+
+
+
+/* =============================
+          S_CONTACTS
+ ============================= */
+ .s_contacts {
+  @include rem(margin-top, 40px);
+  text-align: center;
+  .wrapper {
+    @include rem(margin-top, 15px);
+    @include rem(font-size, 18px);
+  }
+  h2 {
+    @include rem(height, 45px);
+    @include rem(line-height, 45px);
+    color: $dark;
+    display: inline-block;
+    margin: 0;
+    vertical-align: middle;
+  }
+  .tabs {
+    @include rem(height, 45px);
+    @include rem(line-height, 45px);
+    @include rem(margin-left, 20px);
+    background: $white;
+    display: inline-block;
+    vertical-align: middle;
+    .tab {
+      @include rem(padding, 0 50px);
+      @include rem(line-height, 38px);
+      border: 5px solid $red;
+      color: $red;
+      float: left;
+      &:first-child {
+        border-radius: 3px 0 0 3px;
+      }
+      &:last-child {
+        border-radius: 0 3px 3px 0 ;
+      }
+      &.active {
+        background: $red;
+        color: $white;
+      }
+    } // /tab
+  } // /tabs
+  .map {
+    @include rem(margin-top, 20px);
+    @include rem(min-height, 450px);
+  }
+ }
+
+
+
+ /* =============================
+              FOOTER
+ ============================= */
+ footer {
+  text-align: center;
+  h2 {
+    color: $dark;
+  }
+  p {
+    @include rem(font-size, 18px);
+  }
+  .bottom_phone {
+    @include rem(margin, 35px 0);
+    color: red;
+  }
+  a.button {
+    @include rem(margin-bottom, 40px);
+    background: $red;
+  }
+ }

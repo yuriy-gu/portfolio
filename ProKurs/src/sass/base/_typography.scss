@@ -1,0 +1,82 @@
+@font-face {
+  font-family: "RobotoRegular";
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot");
+  src: url("../fonts/RobotoRegular/RobotoRegular.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/RobotoRegular/RobotoRegular.woff") format('woff'),
+       url("../fonts/RobotoRegular/RobotoRegular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "RobotoBold";
+  src: url("../fonts/RobotoBold/RobotoBold.eot");
+  src: url("../fonts/RobotoBold/RobotoBold.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/RobotoBold/RobotoBold.woff") format('woff'),
+       url("../fonts/RobotoBold/RobotoBold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "CleanvertisingLight";
+  src: url("../fonts/CleanvertisingLight/CleanvertisingLight.eot");
+  src: url("../fonts/CleanvertisingLight/CleanvertisingLight.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/CleanvertisingLight/CleanvertisingLight.woff") format('woff'),
+       url("../fonts/CleanvertisingLight/CleanvertisingLight.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+
+
+// svg icons
+@font-face {
+  font-family: 'myfonts';
+  src: url("../fonts/myfonts/myfonts-webfont.eot");
+  src: url("../fonts/myfonts/myfonts-webfont.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/myfonts/myfonts-webfont.woff2") format('woff2'),
+       url("../fonts/myfonts/myfonts-webfont.woff") format('woff'),
+       url("../fonts/myfonts/myfonts-webfont.ttf") format('truetype'),
+       url("../fonts/myfonts/myfonts-webfont.svg#myfonts") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.my {
+  @include rem(font-size, 16px);
+  font-family: 'myfonts';
+  display: inline-block;
+  font-style: normal;
+  text-rendering: auto;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my_a:before {
+  content: 'a';
+}
+.my_b:before {
+  content: 'b';
+}
+.my_c:before {
+  content: 'c';
+}
+.my_d:before {
+  content: 'd';
+}
+.my_e:before {
+  content: 'e';
+}
+.my_f:before {
+  content: 'f';
+}
+.my_g:before {
+  content: 'g';
+}
+.my_h:before {
+  content: 'h';
+}
+.my_i:before {
+  content: 'i';
+}
+.my_j:before {
+  content: 'j';
+}

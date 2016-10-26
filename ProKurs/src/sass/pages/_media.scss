@@ -1,0 +1,86 @@
+/*==========  Desktop First Method  ==========*/
+
+/* Large Devices, Wide Screens */
+@media only screen and (max-width : 1200px) {
+  .s_tizers {
+    .tizer_img,
+    .tizer_descr {
+      display: block;
+      text-align: center;
+    }
+  }
+}
+
+/* Small Devices, Tablets */
+@media only screen and (max-width : 768px) {
+  .logo,
+  .top_phone,
+  .top_description h1,
+  .top_description h2 {
+    text-align: center !important;
+  }
+  .logo {
+    @include rem(margin-bottom, 15px);
+  }
+  .top_phone .tab_item {
+    @include rem(font-size, 30px);
+  }
+  .tabs_header {
+    .tabs {
+      text-align: center;
+      .tab {
+        display: block;
+        float: none;
+      }
+    }
+    .tab_content {
+      font-size: 14px !important;
+      margin-top: 10px;
+    }
+    .button_wrap {
+      margin-top: 15px;
+      text-align: center;
+    }
+  }
+  .tizer_descr {
+    padding-bottom: 10px;
+  }
+  .content_items {
+    text-align: center;
+  }
+  .s_contacts {
+    .tabs {
+      @include rem(margin-bottom, 20px);
+      display: block;
+      height: auto;
+      .tab {
+        display: block;
+        float: none;
+      }
+    }
+  }
+}
+
+/* Extra Small Devices, Phones */
+@media only screen and (max-width : 480px) {
+  .top_description {
+    @include rem(margin-top, 30px);
+    h1 {
+      @include rem(font-size, 50px);
+      @include rem (line-height, 50px);
+    }
+    h2 {
+      @include rem(font-size, 28px);
+    }
+  }
+  .s_tizers {
+    .col-xs-6 {
+      width: 100%;
+    }
+  }
+}
+
+/* Custom, iPhone Retina */
+@media only screen and (max-width : 320px) {
+
+}
