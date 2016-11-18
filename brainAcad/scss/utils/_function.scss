@@ -1,0 +1,26 @@
+ //sprite generator
+	$i: 0;
+	$b: 0;
+	@each $sprite in fb, rss, tw, utube, vk {
+		.#{$sprite}-icon {
+			background: url(../img/social-sprite.png) #{$i}px -50px no-repeat;
+			display: inline-block;
+			height: 50px;
+			width: 50px;
+			border-radius: 30px;
+			&:hover {
+				background-position: #{$b}px 0;
+				$b: $b - 52;
+			}
+		}
+		$i: $i - 52;
+	}
+
+//grid
+$base-columns-amount: 12;
+@for $i from 1 through $base-columns-amount {
+	$minimum-column-width: 100% / $base-columns-amount;
+	.grd-step-column#{$i} {
+		width: $minimum-column-width * $i;
+	}
+}

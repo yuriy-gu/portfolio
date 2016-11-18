@@ -1,0 +1,89 @@
+body {
+  background-color: #fff;
+  color: #000;
+  font-size: 16px;
+  font-family: Arial, Georgia, sans-serif;
+  font-weight: normal;
+}
+
+/*typography styles*/
+h1 {
+  font-family: "Nunito-Light";
+  font-size: 3.75rem;
+  color: #fff;
+
+}
+h2{
+  font-family: "Nunito-Light";
+  font-size: 1.875rem;
+}
+h3 {
+  font-family: "Nunito-Light";
+  font-size: 1.125rem;
+  margin-top: 20px;
+}
+h4 {
+  font-family: "Yantramanav-Regular";
+}
+p {
+  font-family: "Yantramanav-Thin";
+  font-size: 1rem;
+  color: #000;
+}
+
+/*TEXT-ALIGN*/
+.text-center {
+  text-align: center;
+}
+.text-left {
+  text-align: left;
+}
+.text-right {
+  text-align: right;
+}
+
+//global styles
+.wrapper {
+  margin: 0 auto;
+}
+
+/*section styles*/
+.box {
+  height: 800px;
+  overflow: hidden;
+}
+.section-left {
+  width: 50%;
+  float: left;
+}
+.section-right {
+  width: 50%;
+  float: right;
+}
+.s-img {
+  width: 100%;
+  height: 800px;
+}
+
+/*INPUT*/
+input {
+  outline: none;
+  border: none;
+}
+
+/*BUTTON*/
+button {
+  background: transparent;
+  cursor: pointer;
+  border: none;
+}
+button:focus {
+  outline: none;
+}
+
+/*CLEARFIX*/
+.clearfix::after {
+  content: '';
+  display: block;
+  clear: both;
+}

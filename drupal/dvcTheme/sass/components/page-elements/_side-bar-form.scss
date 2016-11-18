@@ -1,0 +1,217 @@
+
+.second-sidebar.form-settings {
+  @include clr;
+  @include rem(max-width, 290px);
+  float: none;
+  margin: 0 auto !important;
+
+  .panels-flexible-row-inside {
+    padding: 0;
+  }
+  .pane-title {
+    @include rem(font-size, 18px);
+    color: $black;
+    font-weight: $bold;
+    line-height: 18px;
+    &:first-letter {
+      color: $black;
+    }
+  }
+  p {
+    @include rem(max-width, 237px);
+    @include rem(padding-bottom, 17px);
+    text-align: center;
+    margin: 0 auto;
+  }
+  //email,phone
+  .views-field-field-profile-phone {
+    .views-label-field-profile-phone {
+      color: $black;
+      display: block;
+      &:before {
+        @include rem(margin-right, 10px);
+        display: inline-block;
+        content: "";
+        background: url("../images/icons/ico-phone.png");
+        width: 27px;
+        height: 27px;
+        vertical-align: middle;
+      }
+    }
+    .field-content {
+      @include rem(margin-left, 37px);
+      @include rem(margin-bottom, 10px);
+    }
+  }
+  .views-field-mail {
+    .views-label-mail {
+      color: $black;
+      display: block;
+      &:before {
+        @include rem(margin-right, 10px);
+        display: inline-block;
+        content: "";
+        background: url("../images/icons/ico-mail.png");
+        width: 27px;
+        height: 27px;
+        vertical-align: middle;
+      }
+    }
+    .field-content {
+      @include rem(margin-left, 37px);
+      @include rem(margin-bottom, 10px);
+    }
+  }
+  //social
+  table {
+    border: transparent;
+    tr, td {
+      background: transparent;
+      border: transparent;
+      vertical-align: baseline;
+      @include rem(padding-bottom, 25px);
+      padding-top: 0;
+      span {
+        @include rem(font-size, 14px);
+        color: $black;
+        font-weight: $normal;
+        line-height: 24px;
+      }
+    }
+    td:last-child {
+      //text-align: right;
+      padding: 10px 0 0 38px;
+    }
+    td:first-child {
+      @include rem(padding, 12px 0);
+    }
+    .delete-link {
+      @include rem(font-size, 14px);
+      color: $main-text-color;
+      text-decoration: none;
+      &:before {
+        @include rem(margin-right, 7px);
+        @include rem(margin-bottom, 4px);
+        display: inline-block;
+        content: "";
+        background: url("../images/icons/minus.png")9px 3px;
+        width: 9px;
+        height: 3px;
+      }
+    }
+    .hybridauth-onclick-current {
+      @include rem(font-size, 14px);
+      color: $btn-color;
+      text-decoration: underline;
+      span {
+        color: $btn-color;
+      }
+      &:before {
+        @include rem(margin-right, 7px);
+        @include rem(margin-bottom, 4px);
+        display: inline-block;
+        content: "";
+        background: url("../images/icons/plus.png");
+        width: 9px;
+        height: 9px;
+        vertical-align: middle;
+      }
+    }
+
+    .Vkontakte:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/vk2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+    .Mailru:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/mail2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+    .Twitter:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/vk2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+    .Facebook:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/fc2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+    .Odnoklassniki:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/ok2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+    .Google:before {
+      @include rem(margin-right, 8px);
+      display: inline-block;
+      content: "";
+      background: url('../images/icons/g2-m.png') 27px 27px;
+      width: 27px;
+      height: 27px;
+      vertical-align: middle;
+    }
+  }
+  .views-field-field-avatar {
+    img {
+      @include rem(margin-top, 17px);
+      @include rem(margin-bottom, 57px);
+      border-radius: 50%;
+    }
+  }
+}
+/******************************************************/
+@include breakpoint($mid_device_width) {
+  .second-sidebar.form-settings {
+    @include rem(max-width, 595px);
+    .blocks {
+      @include span(6 of 12);
+      @include rem(margin-bottom, 62px);
+    }
+    .botton-row2 {
+      @include span(6 of 12 last);
+      .static-block-performer {
+        width: 100%;
+        float: none;
+        .pane-content {
+          @include rem(margin, 0 0 56px 0);
+        }
+      }
+    }
+  }
+}
+  /******************************************************/
+@include breakpoint($max_device_width) {
+  .second-sidebar.form-settings {
+      max-width: 23.07692%;
+      float: right;
+    .blocks {
+      @include span(12 of 12);
+      @include rem(margin-bottom, 62px);
+    }
+    .botton-row2 {
+      @include span(12 of 12 );
+    }
+  }
+}

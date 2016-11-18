@@ -1,0 +1,58 @@
+doctype html
+html
+  head
+    meta(charset="utf-8")
+    link(rel='stylesheet', href='css/style.css')
+
+  body
+    .email-container
+
+      .email-header
+        .email-center
+          a.email-logo(href="//site.com")
+            img(src='img/logo.png', alt='Logo')
+
+          .email-social-wrap
+            a(href='#')
+              img(src='img/soc_twitter.png', alt='Twitter')
+            a(href='#')
+              img(src='img/soc_vk.png', alt='Vk')
+            a(href='#')
+              img(src='img/soc_fb.png', alt='FaceBook')
+
+          .email-header-top.
+            Самое лучшее предложение <br>из всех, которые вы получали
+
+          a(href='#').email-button Подробнее
+
+
+
+      .email-content
+        .email-center
+
+          .email-tizers-wrap
+            .email-tizer-item
+              img(src='img/icon_1.png', alt='alt')
+              p У нас есть лапки
+            .email-tizer-item
+              img(src='img/icon_2.png', alt='alt')
+              p ... и бумажные самолетики
+            .email-tizer-item
+              img(src='img/icon_3.png', alt='alt')
+              p Кроме того, у нас есть чемодан
+
+          .email-sale-text Заказывая сейчас - получите скидку!
+
+          .email-products-wrap
+            -for (var x = 1; x < 5; x++)
+              .email-products-item
+                a(href='#')
+                  img(src='img/items/' + x + '.jpg' alt='alt')
+                .email-price 2 000 руб.
+                a(href='#').product-button Заказать
+
+
+
+      .email-footer
+        .email-center
+          ООО "Продакшн-смайл" <a href='#'>Отписаться от рассылки</a>

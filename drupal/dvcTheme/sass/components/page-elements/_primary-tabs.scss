@@ -1,0 +1,65 @@
+.tabs-wrapper {
+  max-width: 100%;
+  overflow: hidden;
+}
+ul.primary {
+  @include main-container;
+  @include rem(margin, 15px 0 25px 0);
+  border-collapse: initial;
+  border: none;
+  display: table;
+  padding: 0;
+  width: 100%;
+  li {
+    @include rem(min-width, 150px);
+    @include rem(width, 30px);
+    border-color: $btn-color;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    display: table-cell;
+    margin: 0;
+    text-align: center;
+    vertical-align: middle;
+    &.active {
+      border-width: 1px 1px 0 1px;
+    }
+    &.active a {
+      background: $transparent;
+      border: none;
+    }
+    a {
+      @include rem(padding, 10px);
+      @include rem(font-size, 16px);
+      background: $transparent;
+      border: none;
+      color: $black;
+      display: inline-block;
+      margin-right: 0;
+    }
+    a:hover {
+      background-color: $transparent;
+    }
+  }
+  &:after {
+    border-color: $btn-color;
+    border-width: 0 0 1px 0;
+    border-style: solid;
+    content: '';
+    display: table-cell;
+    visibility: visible;
+    width: 100%;
+  }
+}
+
+@media (max-width: 520px) {
+  ul.primary {
+    li {
+      @include rem(min-width, 80px);
+      @include rem(width, 30px);
+      a {
+        @include rem(padding, 10px);
+        @include rem(font-size, 12px);
+      }
+    }
+  }
+}

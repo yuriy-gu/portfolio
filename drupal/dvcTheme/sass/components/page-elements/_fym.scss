@@ -1,0 +1,96 @@
+.fym {
+  .uncommon,
+  .how,
+  .freeze {
+    @include rem(height, 242px);
+    @include rem(margin-bottom, 30px);
+    @include rem(width, 290px);
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    position: relative;
+      .pane-content {
+        @include rem(padding, 0 10px);
+        position: absolute;
+        text-align: center;
+        top: 60%;
+        width: 100%;
+        a {
+          @include rem(font-size, 25px);
+          color: $hover-color;
+          font-weight: $normal;
+          text-decoration: none;
+        }
+      }
+    }
+  .uncommon{
+    @include rem(margin-top, 39px);
+    background: url('../images/uncommon.jpg') no-repeat;
+  }
+  .how {
+    background: url('../images/how.jpg') no-repeat;
+  }
+  .freeze {
+    background: url('../images/freeze.jpg') no-repeat;
+  }
+}
+@include breakpoint($mid_device_width) {
+  .fym {
+    .uncommon,
+    .how,
+    .freeze {
+      @include span(6 of 12);
+      @include rem(height, 314px);
+      background-position: center;
+      background-size: contain;
+      &:hover {
+        background-position: center;
+      }
+    }
+    .uncommon {
+      margin-top: 0;
+    }
+    .how {
+      @include last;
+    }
+    .freeze {
+      @include span(isolate 6 of 12 at 4);
+      clear: both;
+    }
+    .pane-content a {
+      @include rem(font-size, 35px);
+    }
+  }
+}
+
+@include breakpoint($min_width) {
+  .fym {
+    .uncommon,
+    .how,
+    .freeze {
+      @include span(4 of 12);
+    }
+    .uncommon{
+      @include rem(margin-top, 0px);
+      background: url('../images/uncommon-d.jpg') no-repeat center;
+      &:hover {
+        background: url('../images/uncommon-d-h.jpg') no-repeat center;
+      }
+    }
+    .how {
+      background: url('../images/how-d.jpg') no-repeat center;
+      &:hover {
+        background: url('../images/how-d-h.jpg') no-repeat center;
+      }
+    }
+    .freeze {
+      @include last;
+      clear: none;
+      background: url('../images/freeze-d.jpg') no-repeat center;
+      margin-left: 0;
+      &:hover {
+        background: url('../images/freeze-d-h.jpg') no-repeat center;
+      }
+    }
+  }
+}

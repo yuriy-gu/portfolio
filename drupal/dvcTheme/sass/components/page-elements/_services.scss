@@ -1,0 +1,149 @@
+.services {
+  .panels-flexible-new .panels-flexible-row {
+    padding-bottom: 60px;
+  }
+  span {
+    a {
+      @include rem(line-height, 18px);
+      @include rem(font-size, 14px);
+      font-weight: $light;
+      text-decoration: none;
+    }
+  }
+  .pane-views {
+    @include rem(margin-top, 38px);
+  }
+  .views-row {
+    text-align: center;
+  }
+  .views-row:first-child {
+    span {
+      @include rem(margin-bottom, 13px);
+      @include rem(margin-top, 26px);
+      display: inline-block;
+    }
+    a {
+      @include rem(font-size, 18px);
+      @include rem(line-height, 24px);
+      @include rem(margin-bottom, 14px);
+      @include rem(margin-top, 26px);
+      color: $black;
+      font-weight: $bold;
+    }
+    img {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+  // .views-row:last-child {
+  //   a {
+  //     font-weight: $light;
+  //     font-style: italic;
+  //     text-decoration: underline;
+  //   }
+  // }
+  /* Read more */
+  .views-row:nth-child(-n+4) {
+    display: block !important;
+  }
+  .views-row:nth-child(5) {
+  ~ .read-more-btn {
+      display: block;
+    }
+  }
+  .views-row:nth-child(4) ~ .views-row {
+    display: none;
+  }
+  .read-more-btn {
+    display: none;
+    text-align: center;
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .read-more-btn {
+    font-style: italic;
+    font-weight: $light;
+    text-decoration: underline;
+  }
+}
+
+// Tablet
+@include breakpoint($mid_device_width) {
+  .services {
+    .views-row:nth-child(5) {
+    ~ .read-more-btn {
+        display: none;
+      }
+    }
+    .views-row:nth-child(9) {
+    ~ .read-more-btn {
+        display: block;
+      }
+    }
+    .views-row:nth-child(-n+8) {
+      display: block !important;
+    }
+    .views-row:nth-child(9) ~ .views-row {
+      display: none;
+    }
+    .pane-views {
+      @include span(6 of 12);
+      &:nth-child(even) {
+        @include last;
+      }
+      &:nth-child(odd) {
+        clear: both;
+      }
+    }
+    .views-field-field-tax-image {
+      @include rem(width, 70px);
+      float: left;
+    }
+    .views-field-rendered-entity {
+      @include rem(margin-left, 100px);
+      text-align: left;
+    }
+    .views-row:first-child span {
+      margin-top: 0;
+    }
+    .read-more-btn {
+      @include rem(margin-left, 100px);
+      float: left;
+    }
+  }
+}
+
+// Desctop
+@include breakpoint($min_width) {
+  .services {
+    .views-row:first-child {
+      a:hover {
+        border-bottom: 1px solid $btn-color;
+        color: $btn-color;
+      }
+    }
+
+    .pane-views {
+      @include span(4 of 12);
+
+      &:nth-child(odd) {
+        clear: none;
+      }
+
+      &:nth-child(even) {
+        @include span(4 of 12);
+      }
+
+      &:nth-child(3n) {
+        @include last;
+      }
+
+      &:nth-child(3n+1) {
+        clear: both;
+      }
+    }
+  }
+}
+
