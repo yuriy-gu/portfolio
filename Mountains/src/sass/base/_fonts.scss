@@ -1,0 +1,81 @@
+@font-face {
+  font-family: "bringin-sans";
+  src: url("../fonts/bringin-sans/bringin.eot");
+  src: url("../fonts/bringin-sans/bringin.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/bringin-sans/bringin.woff") format('woff'),
+       url("../fonts/bringin-sans/bringin.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opensans-bold";
+  src: url("../fonts/opensans-bold/opensans-bold.eot");
+  src: url("../fonts/opensans-bold/opensans-bold.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/opensans-bold/opensans-bold.woff") format('woff'),
+       url("../fonts/opensans-bold/opensans-bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "opensans-regular";
+  src: url("../fonts/opensans-regular/opensans-regular.eot");
+  src: url("../fonts/opensans-regular/opensans-regular.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/opensans-regular/opensans-regular.woff") format('woff'),
+       url("../fonts/opensans-regular/opensans-regular.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "raleway-bold";
+  src: url("../fonts/raleway-bold/raleway-bold.eot");
+  src: url("../fonts/raleway-bold/raleway-bold.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/raleway-bold/raleway-bold.woff") format('woff'),
+       url("../fonts/raleway-bold/raleway-bold.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// svg icons
+@font-face {
+  font-family: 'myfonts';
+  src: url("../fonts/myFont/myFont.eot");
+  src: url("../fonts/myFont/myFont.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/myFont/myFont.woff") format('woff'),
+       url("../fonts/myFont/myFont.ttf") format('truetype'),
+       url("../fonts/myFont/myFont.svg#myfonts") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.my {
+  color: #fff;
+  display: inline-block;
+  font-family: 'myfonts';
+  font-size: 16px;
+  font-style: normal;
+  position: absolute;
+  text-rendering: auto;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my_a:before {
+  content: 'a';
+}
+.my_b:before {
+  content: 'b';
+}
+.my_c:before {
+  content: 'c';
+}
+.my_d:before {
+  content: 'd';
+}
+.my_e:before {
+  content: 'e';
+}
+.my_f:before {
+  content: 'f';
+}
+.my_h:before {
+  content: 'h';
+}

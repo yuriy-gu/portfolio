@@ -1,0 +1,15 @@
+// @import 'variables/**/*';
+// @import 'variables/_variables';
+
+//@import "libs/**/*"
+// @import 'libs/Slick-slider/slick';
+// @import 'libs/Slick-slider/slick-theme';
+
+// @import "base/**/*";
+@import 'base/_reset';
+@import 'base/_fonts';
+@import 'base/_base';
+
+//@import 'pages/**/*';
+@import '_styles.scss';
+@import 'pages/_media';
