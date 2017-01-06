@@ -1,0 +1,115 @@
+.wrapper {
+  margin: 0 auto;
+  padding: 0 15px;
+  max-width: 1170px;
+}
+
+//nav li styles
+.nav__item {
+  display: inline-block;
+  padding: 0 15px;
+  text-align: center;
+}
+
+//nav links styles
+.nav__text-style {
+  font-size: 1.5rem;//24px
+  position: relative;  
+  transition: 1s;
+}
+
+//section title styles
+.block-title {
+  text-align: center;
+  font: 2.6875rem 'Kudriashov';//43px
+  &::before { @include section-title_line; }
+  &_text {
+    text-align: center;
+    margin: 20px 0;
+  }
+}
+
+//button styles
+.btn {
+    background: #fa8578;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    font-size: 1.25rem;//18px
+    height: 50px;
+    line-height: 44px;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+    transition: 1s ease;
+    width: 100%;
+}
+
+//input styles
+.input {
+  border-radius: 50px;
+  border: 1px solid #b2b2b2;
+  color: #78757f;
+  font-size: 1.125rem;//18px
+  height: 50px;
+  line-height: 50px;
+  padding: 0 20px 0 55px;
+  width: 100%;
+  &:focus {
+    background: repeating-linear-gradient(-45deg, #fff, #fff 25px, #F6F4F5 25px, #F6F4F5 40px) fixed;
+  }
+}
+
+//section padding
+.padding { padding: 90px 0 50px; }
+
+//pop-up grey window
+#overlay {
+  background: rgba(33,33,33,.9);
+  display: none;
+  height: 100%;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1;
+}
+
+.opened {  transform: scale(1) !important; }
+
+//close style
+.close {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  width: 30px;
+  &::after {
+    content: "X";
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+.hidden { display: none; }
+
+.clearfix::after {
+  clear: both;
+  content: '';
+  display: block;
+}
+
+.translateLeft400 {
+  transform: translate(400px, 0px);
+  opacity: 0;
+}
+.translateRight400 {
+  transform: translate(-400px, 0px);
+  opacity: 0;
+}
+.translateLeft400::before,
+.translateRight400::before {
+    transform: translate(0px, -250px);
+    opacity: 0;
+}

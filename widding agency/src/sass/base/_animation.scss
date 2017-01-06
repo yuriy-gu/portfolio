@@ -1,0 +1,14 @@
+//banner navigation dbl-line
+@keyframes floating_l {
+    0% { transform: translate(0px,0px); }
+    50% { transform: translate(2000px,0px); }
+    51% { transform: translate(2000px,27px); }
+    100% { transform: translate(0px,27px); }
+  }
+
+  @keyframes  floating_r {
+    0% { transform: translate(0px,0px); }
+    50% { transform: translate(-2000px,0px); }
+    51% { transform: translate(-2000px,0px); }
+    100% { transform: translate(0px,0px); } 
+  }

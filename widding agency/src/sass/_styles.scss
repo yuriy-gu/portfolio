@@ -1,0 +1,468 @@
+/* =====================================================================
+                                                                   HEADER
+====================================================================== */
+.header {
+  background: #fff;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  transition: .3s;
+  width: 100%;
+  z-index: 100;
+}
+
+.nav-line {
+  @include flex;
+  align-items: center;
+}
+
+.nav-hidden { display: none; }
+
+.underline {
+  color: #78757f;
+  &::before {
+    @include line($width: 130%, $height: 3px, $background: #cd9e47);
+    top: 30px;
+    left: -14%;
+    opacity: 0;
+    transform: scaleX(0);
+    transition: all .3s ease-in-out 0s;
+  }
+  &:hover::before { opacity: 1; transform: scaleX(1); }
+  &:hover { color: #cd9e47; }
+}
+
+.header-text {
+  font-family: "HelveticaNeueCyr-Roman";
+  font-size: 1.25rem; //20px
+  transition: .5s;
+  transform: scale(1);
+}
+
+.header-tel {
+  font-size: 1rem;//16px
+  font-style: italic;
+  position: relative;
+  & span { font-size: 1.5rem;  font-weight: bold; } //24px
+  .my_a {
+    color: #cd9e47;
+    font-size: 1.5rem;//24px
+    left: -30px;
+  }
+}
+
+.header-button {
+  background: transparent;
+  border: 3px solid #fa8578;
+  color: #4c4b4d;
+  max-width: 226px;
+  z-index: 1;
+  &:hover { background: #fa8578; color: #fff; }
+  &::before,
+  &::after {
+    @include line($width: 0, $height: 0, $background: transparent);
+    border: 0px solid transparent;
+    transition: 1s;
+    z-index:-1;
+  }
+  &::before {
+    border-color: transparent transparent transparent #fa8578;
+    bottom: 0;
+    left: 0;
+  }
+  &::after {
+    border-color: transparent #fa8578 transparent transparent;
+    right: 0;
+    top: 0;
+  }
+  &:hover::before { border-width: 165px 0 0 165px; }
+  &:hover::after { border-width: 0 165px 165px 0; }
+}
+
+// when scrolled using this class
+.fixed {
+  .nav-hidden { display: block; }
+  .header-text {
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+  }
+}
+
+
+
+/* =====================================================================
+                                                                   BANNER
+====================================================================== */
+.banner {  
+  background: url(../img/banner_bg.jpg) no-repeat;
+  background-size: cover;
+   box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.37); 
+   position: relative; 
+   top: 100px; 
+   &__video {
+    height: 720px;
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    width: 100%;
+   }
+ }
+
+.banner__content { position: relative; }
+
+.nav-left {
+  @include flex($width: 35%);
+  float: left;
+}
+
+.nav-right {
+  @include flex($width: 35%);
+  float: right;
+  text-align: right;
+}
+
+.logo {
+  background: url(../img/logo-white.svg) no-repeat;
+  height: 155px;
+  margin: auto;
+  width: 280px;
+}
+
+.dbl-line {
+  color: #fff;
+  display: inline-block;
+  height: 30px;
+  line-height: 28px;
+  margin-top: 45px;
+  &::before,
+  &::after {
+    @include line($width: 130%, $background: #fff, $height: 1px);
+    left: -15%;
+  }
+  &::before { top: 0; }
+  &::after { bottom: 0; }
+  &:hover::before {
+    animation: floating_l ease-in-out .8s;
+    height: 2px;
+    transform: translate(0px, 27px);
+  }
+  &:hover::after { animation: floating_r ease-in-out .8s; }
+}
+
+//proposition
+.proposition {
+  background: url(../img/head_prop.png) no-repeat;
+  height: 405px;
+  margin: 50px auto;
+  max-width: 585px;
+  padding: 2% 4%;
+  text-align: center;
+  width: 100%;
+}
+
+.prop__content {
+  height: 315px;
+  overflow: hidden;
+}
+
+.border-bottom {
+  font-size: 2.1875rem;//35px
+  display: block;
+  &::after {
+    @include line($width: 100%, $background: #fff, $height: 2px);
+    margin: 10px auto;
+    position: static;
+  }
+}
+
+.dotted-bg {
+  display: block;
+  font-size: 2.5625rem;//41px
+  position: relative;
+  &::before,
+  &::after {
+    @include line($width: 26%, $background: url(../img/dotted_line.png) repeat-x, $height: 6px);
+    top: 24px;
+  }
+  &::before { left: 0; }
+  &::after { right: 0; }
+}
+
+.border-top {
+  display: block;
+  position: relative;
+  margin-bottom: 10px;
+  padding-top: 20px;
+  &::before {
+    @include line($width: 100%, $background: #fff, $height: 2px);
+    margin: 10px auto;
+    top: -5px;
+  }
+}
+
+.main-slogan {
+  font: 300 1.2rem "HelveticaNeueCyr-Thin";//19.2px
+  &::before { height: 1px; }
+}
+
+
+
+/* =====================================================================
+                                                              REQUEST-BLOCK
+====================================================================== */
+.request-block {
+  background: url(../img/request_bg.jpg) no-repeat;
+  background-size: cover;
+  margin-top: 210px;
+}
+
+.request__bg {
+  background: url(../img/request_bg1.png) no-repeat;
+  background-size: contain;
+  height: 472px;
+  overflow: hidden;
+  padding: 50px;
+  text-align: center;
+  width: 100%;
+  &_text-top { font: 5rem 'LirussTYGRA'; }//80px
+  &_text  { 
+    &::before {
+      @include line($width: 10%, $background: #fa8578, $height: 2px);
+      margin: 0 auto 20px;
+      position: static;
+    }
+  }
+}
+
+.contact-form { margin-top: 30px; }
+
+.contact_input {
+  display: inline-block;
+  margin: 0px 10px;
+  max-width: 286px;
+  position: relative;
+  .my_c { 
+    color: #78757f;
+    font-size: 3rem; 
+    left: 10px; 
+    top: -2px; 
+  }
+  .my_b,
+  .my_a { 
+    color: #78757f; 
+    font-size: 2rem;
+    left: 15px; 
+    top: calc(50% - 17px); 
+  }
+}
+
+.submit {
+  margin: 30px auto;
+  max-width: 330px;
+  &:hover { background: #ea6859; }
+}
+
+
+
+/* =====================================================================
+                                                             ABOUT
+====================================================================== */
+.list__item {
+  display: inline-block;
+  float: left;
+}
+
+.left-side {
+  @include left-side($width: 50%);
+  transition: .5s;
+}
+
+.right-side {
+  @include right-side($width: 50%);
+  transition: .5s;
+}
+
+.list-text {
+  @include flex-col;
+  position: relative;
+  transition: 1s;
+  &::before {
+    @include line($width: auto, $background: transparent, $height: auto);
+    color: rgba(191,133,26,.5);
+    font: 400 16.25rem 'Kudriashov';//260px
+    transition: 1.3s;
+    z-index: -1;
+  }
+  h4 { 
+    border-bottom: 2px dashed #4c4b4d;;
+    margin-bottom: 15px; 
+  }
+}
+
+.list__item:nth-child(odd) .list-text { padding-right: 6em; }
+.list__item:nth-child(even) .list-text { padding-left: 6em; }
+
+.list .list__item:nth-child(1) .list-text::before { content: '1'; }
+.list .list__item:nth-child(2) .list-text::before { content: '2'; }
+.list .list__item:nth-child(3) .list-text::before { content: '3'; }
+.list .list__item:nth-child(4) .list-text::before { content: '4'; }
+.list .list__item:nth-child(5) .list-text::before { content: '5'; }
+
+.list-img { height: 500px; }
+
+
+
+/* =====================================================================
+                                                                  VIDEO
+====================================================================== */
+.video {
+  background: url(../img/video_bg.jpg) no-repeat;
+  background-size: cover;
+  text-align: center;
+  &__content {
+    padding: 0 5em;
+  }
+}
+
+.video_title { 
+  font: 400 2.6875rem 'Kudriashov';//43px
+  &::before { @include section-title_line; }
+}
+
+.video_text { margin: 10px; }
+
+
+
+/* =====================================================================
+                                                                  PORTFOLIO
+====================================================================== */
+.result { 
+  border: 2px solid #898888;
+  margin-top: 30px;
+  min-height: 520px;
+  padding: 10px; 
+}
+
+.result:nth-child(even) .text { float: left; text-align: right; }
+.result:nth-child(odd) .text { float: right; }
+
+.result:nth-child(even) .res__img_big,
+.result:nth-child(odd) .res__img_small { float: left; margin-left: 0;}
+
+.result:nth-child(even) .res__img_small,
+.result:nth-child(odd) .res__img_big { float: right; }
+
+.result:nth-child(odd) .res__img_small { float: left; }
+
+.text { 
+  padding: 1em 3em 0; 
+  width: 38%; 
+}
+
+.res-img { 
+  display: inline-block;
+  width: 62%; 
+}
+
+.result__name { 
+  color: #cd9e47;
+  text-transform: uppercase;
+  &::after {
+    @include line($width: 70%, $height: 1px, $background: #cd9e47);
+    display: inline-block;
+    position: static;
+  }
+}
+
+.result__wed-name { margin: 10px 0 40px; }
+.result__item { margin-bottom: 40px; }
+.result_title { color: #898888; font: 700 1.0625rem "HelveticaNeueCyr-Roman"; }
+.result_text { color: #898888; font: 1rem "HelveticaNeueCyr-Thin"; margin-top: 5px; }
+
+.open_gallery { 
+  max-width: 215px;
+  display: inline-block; 
+  cursor: pointer; 
+  &:hover { background: #ea6859; }
+}
+
+.res__img_big { 
+  height: 510px; 
+  width: 350px; 
+}
+
+.res__img_small { 
+  height: 250px; 
+  margin-bottom: 10px; 
+  margin-left: 10px; 
+  width: 330px; 
+}
+
+//open-gallery pop-up window
+#pop_gallery {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: inset 0 0 35px rgba(0,0,0,.5);
+  height: 1000px;
+  left: calc(50% - 500px);
+  max-width: 1000px;
+  padding: 20px;
+  position: absolute;
+  transform: scale(1.4);
+  transition: 2s;
+  width: 100%;
+  z-index: 5;
+  //border in pop-up window
+  &::before {
+    border: 2px solid #cd9e47;
+    border-radius: 10px;
+    content: '';
+    display: block;
+    height: 98%;
+    left: 10px;
+    position: absolute;
+    top: 10px;
+    width: 97.5%;
+  }
+  .result__name::after { width: 100%; }
+  .pop_foto {
+    height: calc(100% - 70px);
+    overflow-y: scroll;
+    position: relative;
+  }
+}
+
+.more-results {
+  border-bottom: 2px dashed;
+  color: #4a4a4a;
+  cursor: pointer;
+  display: table;
+  font: 700 37px 'HelveticaNeueCyr-Roman';
+  margin: 80px auto;
+  &:hover { border: none; }
+}
+
+
+
+/* =====================================================================
+                                                                   PRICE
+====================================================================== */
+.price_block {
+  background: url(../img/cost.jpg) no-repeat;
+  background-size: cover;
+}
+.price-table {
+  background: #fff;
+  width: 100%;
+}
+
+
+
+/* =====================================================================
+                                                                   LOGOS
+====================================================================== */
+
+/* =====================================================================
+                                                                   FOOTER
+====================================================================== */
