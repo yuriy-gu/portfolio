@@ -10,6 +10,7 @@ $(document).ready(function() {
     }
   });
 
+  //scrolling window(navigation)
   $('.nav__text-style').click( function () {
     var scroll_el = $(this).attr('href');
       if ( $(scroll_el).length != 0 ) {

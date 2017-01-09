@@ -1,0 +1,289 @@
+/* =====================================================================
+                                                                   HEADER
+====================================================================== */
+.header {
+  height: 100px;
+  line-height: 100px;
+  position: fixed;
+  top: 0;
+  transition: .3s;
+  width: 100%;
+  z-index: 100;
+  background: #fff;
+}
+.fixed__header { background: rgba(68,192,194,.5); }
+.logo-block {
+  float: left;
+  &_logo {
+    font: 2.6875rem "lobster_1.4";
+    color: #44c0c2;
+    line-height: 100px;
+  }  
+}
+.main-nav { float: right; }
+.mobile_nav {
+  background: url(../img/mobile_menu.png) no-repeat;
+  background-size: cover;
+  cursor: pointer;
+  display: none;
+  height: 50px;
+  width: 50px;
+}
+.nav__item { display: inline-block; }
+.nav__item_text {
+  color: #444A55;
+  display: block;
+  font-size: 0.9375rem;
+  padding: 0 20px;
+  position: relative;
+  &:hover { color: #00CCCE; }
+  &::before {
+    @include line;
+    transform: scaleX(0);
+  }
+  &:hover::before { transform: scaleX(1); }
+}
+.active {
+  background: #f8f9fb;
+  color: #00CCCE;
+  &::after { @include line; }
+}
+
+
+
+/* =====================================================================
+                                                               BANNER
+====================================================================== */
+.banner { margin-top: 100px; }
+.banner__slider {
+  background: #49cbcd;
+  overflow: hidden;
+  position: relative;
+}
+.slider__item { display: inline-block; position: relative;}
+.slider_img { height: 565px; }
+//arrows style
+.slick-arrow {
+  background: url(../img/slider_arrow.png) no-repeat center;
+  background-size: cover;
+  cursor: pointer;
+  height: 51px;
+  position: absolute;
+  top: calc(52% - 25px);
+  width: 51px;
+  z-index: 20;
+  &:hover { opacity: .7; }
+}
+.arrow-left {
+  left: 29px;
+  transform: rotate(180deg);
+}
+.arrow-right { right: 29px; }
+
+//slider text style
+.slider__content {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  height: 565px;
+  justify-content: center;
+  left: 0;
+  max-width: 1170px;
+  position: absolute;
+  text-align: center;
+  top: 0;
+  width: 100%;
+}
+.main_heading { 
+  padding-bottom: 15px;
+  text-shadow: 0px 1px 0 rgba(0,0,0,.2)
+}
+.slider_text { line-height: 2em; }
+//button
+.slider_btn {
+  border: 3px solid #fff;
+  font: 1.625rem "opensans-semibold";
+  height: 70px;
+  line-height: 70px;
+  margin-top: 2em;
+  width: 230px;
+  &:hover {
+    background: #fff;
+    color: #49cbcd;
+  }
+}
+
+
+
+/* =====================================================================
+                                                                  TEAM
+====================================================================== */
+.team { 
+  text-align: center;
+  padding: 5.8em 0 6.3em;
+}
+.senior-staff {
+  @include flex-box;
+  padding: 0 1em;
+}
+.box { 
+  margin-top: 8em;
+  max-width: 246px;
+  padding: 0 1em;
+  position: relative;
+  width: 100%;
+}
+.senior-staff__img-block { position: relative; }
+.senior-staff_img {
+  max-height: 201px;
+  max-width: 201px;
+}
+.fa-plus {
+  position: absolute;
+  left: calc(50% - 21px);
+  top: calc(50% - 21px);
+  color: #f46d6d;
+  font-size: 3rem;
+  width: 41px;
+  height: 41px;
+}
+.box-text {
+  max-height: 300px;
+  padding-top: 4em;
+  overflow: hidden;
+}
+.senior-name { margin-bottom: 5px; }
+.senior-about { margin-top: 27px ; }
+
+
+
+/* =====================================================================
+                                                            PLANS
+====================================================================== */
+.plans {
+  background: #f1f1f1;
+  padding: 7.5em 0 6.7em;
+}
+.plans-line {
+  @include flex-box;
+  text-align: center;
+}
+.offer {
+  margin: 0 1%;
+  min-width: 230px;
+  width: 37%;
+  &__item { overflow: hidden; }
+  &__item_title {
+    background: #485460;
+    color: #fff;
+    font-size: 1.625rem; 
+    height: 75px;
+    line-height: 75px;
+  }
+  &__item_price {
+    background: #f8f9fb;
+    font-size: 1.25rem;
+    height: 70px;
+    line-height: 70px;
+  }
+  &__item_text {
+    background: #fff;
+    font-size: 0.875rem;
+    height: 45px;
+    line-height: 45px;
+  }
+  &__item_btn {
+    background: #f8f9fb;
+    height: 100px;
+    line-height: 100px;
+    .offer_btn {
+      background: #788492;
+      border-radius: 5px;
+      color: #fff;
+      height: 40px;
+      line-height: 40px;
+      transition: .3s ease;
+      width: 170px;
+    }
+  }
+  .border { border-bottom: 1px solid #ecf0f1; }
+  .offer_active {  background: #49cbcd; transition: .5s ease;}
+}
+
+
+
+/* =====================================================================
+                                                           FOOTER
+====================================================================== */
+.footer {
+  background: url(../img/footer_bg.jpg) no-repeat;
+  background-size: cover;
+  padding: 6em 0;
+}
+.ftr_title { color:#fff; text-align: center; }
+.ftr__content { margin-top: 6.2em; }
+.ftr__left {
+  float: left;
+  overflow: hidden;
+  padding-right: 1em;
+  width: 50%;
+  &_title {
+    color: #fff;
+    font-size: 1.5rem;
+  }
+  &_text {
+    color: rgba(255,255,255,.5);
+    margin-top: 1.5em;
+  }
+}
+.ftr_social { margin: 2.5em 0 1em;}
+.fb { @include social-style($background: #23589A ); }
+.tw { @include social-style($background: #00C3F5 ); }
+.ggl { @include social-style($background: #FF4A3E ); }
+
+.ftr__adress_text {
+  color: #bface2;
+  font-family: "MyriadPro-Regular";
+  font-style: normal;
+  margin-bottom: 5px;
+}
+.ftr__right {
+  float: right;
+  padding-left: 1em;
+  width: 50%;
+}
+.input__block {
+  display: inline-flex;
+  width: 100%;
+}
+.form_inp {
+  color: #c1c1c1;
+  display: block;
+  font: 1rem "opensans-regular";
+  height: 45px;
+  line-height: 45px;
+  margin-bottom: 2em;
+  max-width: 264px;
+  padding: 0 15px;
+  width: 100%;
+}
+.name_inp {margin-right: 2.3em; }
+.form_txtar {
+  color: #c1c1c1;
+  font: 1rem "opensans-regular";
+  height: 180px;
+  max-width: 570px;
+  margin-bottom: 2em;
+  padding: 20px;
+  resize: none;
+  width: 100%;
+}
+.ftr_btn {
+  background: #00C3F5;
+  float: right;
+  font: 1.375rem 'opensans-regular';
+  height: 46px;
+  line-height: 46px;
+  width: 170px;
+  &:hover { opacity: .7; }
+}
