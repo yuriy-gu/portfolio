@@ -18,6 +18,16 @@
 
 .nav-hidden { display: none; }
 
+// when scrolled using this class
+.fixed {
+  .nav-hidden { display: block; }
+  .header-text {
+    transform: scale(0);
+    position: absolute;
+    top: 0;
+  }
+}
+
 .underline {
   color: #78757f;
   &::before {
@@ -79,16 +89,6 @@
   &:hover::after { border-width: 0 165px 165px 0; }
 }
 
-// when scrolled using this class
-.fixed {
-  .nav-hidden { display: block; }
-  .header-text {
-    transform: scale(0);
-    position: absolute;
-    top: 0;
-  }
-}
-
 
 
 /* =====================================================================
@@ -97,10 +97,10 @@
 .banner {  
   background: url(../img/banner_bg.jpg) no-repeat;
   background-size: cover;
-   box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.37); 
-   position: relative; 
-   top: 100px; 
-   &__video {
+  box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.37); 
+  position: relative; 
+  top: 100px; 
+  &__video {
     height: 720px;
     overflow: hidden;
     position: absolute;
@@ -161,10 +161,7 @@
   width: 100%;
 }
 
-.prop__content {
-  height: 315px;
-  overflow: hidden;
-}
+.prop__content { height: 315px; overflow: hidden; }
 
 .border-bottom {
   font-size: 2.1875rem;//35px
@@ -228,7 +225,7 @@
   &_text-top { font: 5rem 'LirussTYGRA'; }//80px
   &_text  { 
     &::before {
-      @include line($width: 10%, $background: #fa8578, $height: 2px);
+      @include line($width: 30%, $background: #fa8578, $height: 2px);
       margin: 0 auto 20px;
       position: static;
     }
@@ -242,6 +239,7 @@
   margin: 0px 10px;
   max-width: 286px;
   position: relative;
+  //icons
   .my_c { 
     color: #78757f;
     font-size: 3rem; 
@@ -257,6 +255,7 @@
   }
 }
 
+//button
 .submit {
   margin: 30px auto;
   max-width: 330px;
@@ -268,16 +267,12 @@
 /* =====================================================================
                                                              ABOUT
 ====================================================================== */
-.list__item {
-  display: inline-block;
-  float: left;
-}
+.list__item { float: left; }
 
 .left-side {
   @include left-side($width: 50%);
   transition: .5s;
 }
-
 .right-side {
   @include right-side($width: 50%);
   transition: .5s;
@@ -320,9 +315,7 @@
   background: url(../img/video_bg.jpg) no-repeat;
   background-size: cover;
   text-align: center;
-  &__content {
-    padding: 0 5em;
-  }
+  &__content { padding: 0 5em; }
 }
 
 .video_title { 
@@ -355,16 +348,8 @@
 
 .result:nth-child(odd) .res__img_small { float: left; }
 
-.text { 
-  padding: 1em 3em 0; 
-  width: 38%; 
-}
-
-.res-img { 
-  display: inline-block;
-  width: 62%; 
-}
-
+//text
+.text { padding: 1em 3em 0; width: 38%; }
 .result__name { 
   color: #cd9e47;
   text-transform: uppercase;
@@ -374,12 +359,12 @@
     position: static;
   }
 }
-
 .result__wed-name { margin: 10px 0 40px; }
 .result__item { margin-bottom: 40px; }
 .result_title { color: #898888; font: 700 1.0625rem "HelveticaNeueCyr-Roman"; }
 .result_text { color: #898888; font: 1rem "HelveticaNeueCyr-Thin"; margin-top: 5px; }
 
+//button
 .open_gallery { 
   max-width: 215px;
   display: inline-block; 
@@ -387,15 +372,25 @@
   &:hover { background: #ea6859; }
 }
 
-.res__img_big { 
-  height: 510px; 
-  width: 350px; 
+//images
+.res-img { 
+  display: inline-block;
+  width: 62%;
+  //animating images
+  .zoom { transform: scale(.6); opacity: 0; }
 }
-
+.res__img_big {
+  height: 510px;
+  opacity: 1; 
+  transition: .5s;
+  width: 350px;
+}
 .res__img_small { 
   height: 250px; 
   margin-bottom: 10px; 
-  margin-left: 10px; 
+  margin-left: 10px;
+  opacity: 1; 
+  transition: .5s;
   width: 330px; 
 }
 
@@ -427,12 +422,13 @@
   }
   .result__name::after { width: 100%; }
   .pop_foto {
-    height: calc(100% - 70px);
+    height: calc(100% - 160px);
     overflow-y: scroll;
     position: relative;
   }
-}
+}//pop-up window end
 
+//button - more ruseluts at gallery
 .more-results {
   border-bottom: 2px dashed;
   color: #4a4a4a;
@@ -452,16 +448,106 @@
   background: url(../img/cost.jpg) no-repeat;
   background-size: cover;
 }
-.price-table {
+
+.table_bg { 
   background: #fff;
+  border-radius: 50px;
+  padding: 50px;
+  text-align: center;
+  .table_title { 
+    font: 700 1.5625rem  'HelveticaNeueCyr-Roman';
+    &::after { 
+      @include line($width: 100%, $background: #fa8578, $height: 2px);
+      position: static;
+      margin: 30px 0;
+    }
+  }
+  .table_budget::before {
+    @include line($width: 100%, $background: #fa8578, $height: 2px);
+    position: static;
+    margin: 30px 0;
+  }
+}
+.price-table {
   width: 100%;
+  &_body-title {
+    height: 45px;
+    background: #cd9e47;
+    color: #fff;
+    font: 700 1.3125rem/45px "HelveticaNeueCyr-Roman";
+    padding-left: 10px;
+  }
+  .guests { width: 50%; }
+  .district { width: 25%;}
+  .border { border-left: 5px solid #fff; border-right: 5px solid #fff; }
+  .empty { height: 30px; }
+  &_info {
+    font: 300 1rem/33px "HelveticaNeueCyr-Roman";
+    padding-left: 15px;
+  }
 }
 
 
 
 /* =====================================================================
-                                                                   LOGOS
+                                                                   CONTRACT
 ====================================================================== */
+.contract { margin-top: 40px; }
+.contrac__item { display: inline-block; }
+
+.contract_photo {
+  img { width: 361px; height: 361px; }
+  //number
+}
+
+.contract__item:nth-child(odd) .contract_photo { float: left; }
+.contract__item:nth-child(even) .contract_photo { float: right; }
+
+//text style
+.contract__item:nth-child(odd) .contract__text { float: right; }
+.contract__item:nth-child(even) .contract__text { float: left; text-align: right; }
+
+.contract__item:nth-child(odd) .contract__text::before { left: -14%; }
+.contract__item:nth-child(even) .contract__text::before { right: -13%; }
+
+.contract__item:nth-child(1) .contract__text::before { content:'1'; }
+.contract__item:nth-child(2) .contract__text::before { content:'2'; }
+.contract__item:nth-child(3) .contract__text::before { content:'3'; }
+.contract__item:nth-child(4) .contract__text::before { content:'4'; }
+.contract__item:nth-child(5) .contract__text::before { content:'5'; }
+.contract__item:nth-child(6) .contract__text::before { content:'6'; }
+.contract__item:nth-child(7) .contract__text::before { content:'7'; }
+.contract__item:nth-child(8) .contract__text::before { content:'8'; }
+
+.contract__text {
+  display: flex;
+  flex-direction: column;
+  height: 360px;
+  position: relative;
+  justify-content: center;
+  width: 65%;
+  &::before {
+  color: rgba(191,133,26,.8);
+  font: 400 12.25rem 'Kudriashov';//260px
+  position: absolute;
+  top: 25%;
+  }
+  &_title {
+    color: #4a4a4a;
+    text-transform: uppercase;
+    font: 700 1.5625rem "HelveticaNeueCyr-Roman";
+    &::after { 
+      @include line($width: 100%, $background: #cd9e47, $height: 1px);
+      position: static;
+      margin: 20px 0;
+    }
+  }
+  &_content { font: 300 1.25rem/30px 'HelveticaNeueCyr-Thin'; }
+}
+
+
+
+
 
 /* =====================================================================
                                                                    FOOTER

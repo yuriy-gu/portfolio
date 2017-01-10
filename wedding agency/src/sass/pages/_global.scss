@@ -20,12 +20,13 @@
 
 //section title styles
 .block-title {
-  text-align: center;
   font: 2.6875rem 'Kudriashov';//43px
+  text-align: center;
+  text-transform: uppercase;
   &::before { @include section-title_line; }
   &_text {
-    text-align: center;
     margin: 20px 0;
+    text-align: center;
   }
 }
 
@@ -101,12 +102,14 @@
 }
 
 .translateLeft400 {
-  transform: translate(400px, 0px);
-  opacity: 0;
-}
-.translateRight400 {
   transform: translate(-400px, 0px);
   opacity: 0;
+  display: none;
+}
+.translateRight400 {
+  transform: translate(400px, 0px);
+  opacity: 0;
+  display: none;
 }
 .translateLeft400::before,
 .translateRight400::before {
