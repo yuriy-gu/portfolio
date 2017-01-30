@@ -36,7 +36,9 @@
                                                         HEADER
 ====================================================================== -->
   <header id='top' class="header">
-    <div class="nav-line wrapper">
+
+    <div class="nav-block wrapper">
+
       <ul class="nav-hidden">
         <li class="nav__item">
           <a href="#about_block" class="nav__text-style underline">о нас</a>
@@ -48,7 +50,7 @@
           <a href="#price_block" class="nav__text-style underline">цены</a>
         </li>
         <li class="nav__item">
-          <a href="#" class="nav__text-style underline">команда</a>
+          <a href="#team_block" class="nav__text-style underline">команда</a>
         </li>
         <li class="nav__item">
           <a href="#" class="nav__text-style underline">отзывы</a>
@@ -57,6 +59,7 @@
           <a href="#" class="nav__text-style underline">контакты</a>
         </li>
       </ul>
+
       <p class="header-text">Организация свадьбы<br /> Вашей мечты</p>
       <p class="header-text">Работаем в Москве, МО,<br /> а так же в Сочи, Крыму и Европе</p>
       <p class="header-tel"><i class="my my_a"></i> +7 (926) <span>123-45-67</span></p>
@@ -80,43 +83,45 @@
       </video>
     </div>
   
-    <div class="banner__content wrapper">
-      <div class="top-content">
+    <div class="banner__content">
+      <div class="wrapper">
 
-        <ul class="nav-left">
-          <li class="nav__item">
-            <a href="#about_block" class="nav__text-style line dbl-line">о нас</a>
-          </li>
-          <li class="nav__item">
-            <a href="#portfolio_block" class="nav__text-style line dbl-line">портфолио</a>
-          </li>
-          <li class="nav__item">
-            <a href="#price_block" class="nav__text-style line dbl-line">цены</a>
-          </li>
-        </ul>
+        <div class="top-content">
+          <ul class="nav-left">
+            <li class="nav__item">
+              <a href="#about_block" class="nav__text-style line dbl-line">о нас</a>
+            </li>
+            <li class="nav__item">
+              <a href="#portfolio_block" class="nav__text-style line dbl-line">портфолио</a>
+            </li>
+            <li class="nav__item">
+              <a href="#price_block" class="nav__text-style line dbl-line">цены</a>
+            </li>
+          </ul>
 
-        <ul class="nav-right">
-          <li class="nav__item">
-            <a href="#" class="nav__text-style line dbl-line">команда</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__text-style line dbl-line">отзывы</a>
-          </li>
-          <li class="nav__item">
-            <a href="#" class="nav__text-style line dbl-line">контакты</a>
-          </li>
-        </ul>
+          <ul class="nav-right">
+            <li class="nav__item">
+              <a href="#team_block" class="nav__text-style line dbl-line">команда</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__text-style line dbl-line">отзывы</a>
+            </li>
+            <li class="nav__item">
+              <a href="#" class="nav__text-style line dbl-line">контакты</a>
+            </li>
+          </ul>
 
-        <div class="logo"></div>
-      </div><!-- top-content -->
+          <div class="logo"></div>
+        </div><!-- top-content end-->
 
-      <div class="proposition">
-        <div class="prop__content">
-          <h3><span class="border-bottom">Подарите себе</span>ЯРКУЮ И НЕЗАБЫВАЕМУЮ <span class="dotted-bg">СВАДЬБУ</span><span class="border-top">о которой вы всегда мечтали!</span></h3>
-          <h1 class="border-top main-slogan">Организуем стильную свадьбу под фиксированный бюджет или просчитаем свадебный бюджет исходя из Ваших пожеланий!</h1>
+        <div class="proposition">
+          <div class="prop__content">
+            <h3><span class="border-bottom">Подарите себе</span>ЯРКУЮ И НЕЗАБЫВАЕМУЮ <span class="dotted-bg">СВАДЬБУ</span><span class="border-top">о которой вы всегда мечтали!</span></h3>
+            <h1 class="border-top main-slogan">Организуем стильную свадьбу под фиксированный бюджет или просчитаем свадебный бюджет исходя из Ваших пожеланий!</h1>
+          </div>
         </div>
-      </div>
-
+        
+      </div><!-- wrapper end -->
     </div><!-- banner__content end -->
   </section>
 
@@ -271,7 +276,7 @@
         <div class="res-img">
           <img src="img/result/res1/2res.jpg" class="res__img_big" alt />
           <img src="img/result/res1/4res.jpg" class="res__img_small" alt />
-          <img src="img/result/res1/11res.jpg" class="res__img_small" alt />
+          <img src="img/result/res1/1res.jpg" class="res__img_small" alt />
         </div>
       </div><!-- result end -->
 
@@ -704,11 +709,89 @@
 
 
   <!-- =====================================================================
-                                                              BANNER
+                                                              DISCOUNT
   ====================================================================== -->
+  <section class="discount padding">
+    <div class="wrapper clearfix">
+
+      <div class="discount__left">
+        <h4 class="discount_date">
+          АКЦИЯ
+          <p>только до 30.03.2017</p>
+        </h4>
+      <div class="discount__left_img"></div>
+      </div>
+
+      <div class="discount__right">
+        <h4 class="discount_about">скидка 30% на организацию свадьбы</h4>
+        <p class="discount_content">Для невест, которые хотят стильную и современную<br /> свадьбу не как у подруги!</p>
+        <p class="discount_details">Подробнее с удовольствие расскажем по телефону</p>
+        <form class="contact-form">
+          <span class=" contact_input discount_form">
+            <i class="my my_c"></i>
+            <input type="text" placeholder="Ваше имя:" class="input" />
+          </span>
+          <span class=" contact_input discount_form">
+            <i class="my my_b"></i>
+            <input type="email" placeholder="Ваш e-mail:" class="input" />
+          </span>
+          <span class=" contact_input discount_form">
+            <i class="my my_a"></i>
+            <input type="tel" placeholder="Ваш телефон:" class="input input_tel" />
+          </span>
+          <button type="submit" class="btn submit">Оставить заявку</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+
+
   <!-- =====================================================================
-                                                              BANNER
+                                                              TEAM
   ====================================================================== -->
+  <section class="team__block padding" id="team_block">
+    <div class="wrapper">
+
+      <h2 class="block-title">ваша свадьба в руках профессионалов</h2>
+      <p class="block-title_text">Наши ключевые сотрудники, которые помогут организовать свадьбу,<br /> о которой Вы всегда мечтали!</p>
+    
+      <div class="team__photo">
+        <figure class="team__item">
+          <img src="img/team_foto_1.jpg" alt class="team__photo_sm">
+          <figcaption class="team__photo_signature">Анна<span>арт-директор</span></figcaption>
+        </figure>
+        <figure class="team__item">
+          <img src="img/team_foto_2.jpg" alt class="team__photo_big">
+          <figcaption class="team__photo_signature">Яна<span>основатель свадебного агенства</span></figcaption>
+        </figure>
+        <figure class="team__item">
+          <img src="img/team_foto_3.jpg" alt class="team__photo_sm">
+          <figcaption class="team__photo_signature">Михаил<span>специалист по техническим вопросам</span></figcaption>
+        </figure>
+      </div>
+
+      <div class="team__sert">
+        <figure class="sert_item">
+          <img src="img/team_sert_1.jpg" alt class="sert_sm">
+          <figcaption class="sert_signature">члены российской ассоциации свадебных специалистов</figcaption>
+        </figure>
+        <figure class="sert_item">
+          <img src="img/team_sert_2.jpg" alt class="sert_big">
+          <figcaption class="sert_signature">члены международной свадебной ассоциации</figcaption>
+        </figure>
+        <figure class="sert_item">
+          <img src="img/team_sert_3.jpg" alt class="sert_sm">
+          <figcaption class="sert_signature">организация и проведение мероприятий для фотографов, видеографов и других специалистов свадебной индустрии</figcaption>
+        </figure>
+      </div>
+
+    </div><!-- wrapper end -->
+  </section>
+
+
+
+
   <!-- =====================================================================
                                                               BANNER
   ====================================================================== -->

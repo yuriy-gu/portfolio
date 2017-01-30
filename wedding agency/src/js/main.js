@@ -39,18 +39,18 @@ $(document).ready(function() {
   //pop_up
   $('.open_gallery').click(function () {
     var src = $(this).data('src'),
-         num = $(this).data('fotoarr'),
          fromtop = $(document).scrollTop(),
+         num = $(this).data('num'),
          h3 = $(this).siblings('h3').text(),
          p = $(this).siblings('.result__wed-name').text();
     $('#pop_gallery h3').text(h3);
     $('#pop_gallery p').text(p);
     $('#pop_gallery .pop_foto').html('')
     var i = 0;
-    while( i<=src.length && i<=20 ) {
+    while( i <= src.length) {
       i++;
       $('#pop_gallery .pop_foto').append('<img src=" ' + src + i + 'res.jpg" alt="">')
-    }; 
+    };
     $('#overlay').fadeIn(200, function () {
       var pop = $('#pop_gallery');
       pop.removeClass('hidden').css('top', fromtop + 95);
@@ -84,13 +84,13 @@ $(document).ready(function() {
       return false
   });
 
+
   if (screen.width > 960) {
+    var translateLeft = 'translateLeft400',
+         translateRight = 'translateRight400';
     // waypoint animation to about_block(list-text)
     $('.list-text').each(function (i) {
-      var el = $(this),
-           translateLeft = 'translateLeft400',
-           translateRight = 'translateRight400';
-      
+      var el = $(this);     
       function leftRight () {
         if (i % 2) {
           el.addClass(translateLeft);
@@ -98,7 +98,6 @@ $(document).ready(function() {
           el.addClass(translateRight);
         }
       }
-      leftRight();
       //scrolling from top to down
       $(el).waypoint(function (dir) {
         if (dir === 'down') {
@@ -120,9 +119,29 @@ $(document).ready(function() {
         offset: -70
         })
     });  
-    //end waypoint animation to about_block(list-text)
 
-    // result_block animating foto(zooming)
+    //animation to contract(.contract__text)
+    $('.contract__text').each(function (i) {
+            var el = $(this);
+            if (i % 2) {
+                el.css({
+                    opacity: '0'
+                }).addClass(translateRight);
+            } else {
+                el.css({
+                    opacity: '0'
+                }).addClass(translateLeft);
+            }
+            $(el).waypoint(function (direction) {
+                el.animate({
+                    opacity: '1'
+                }, 300).removeClass(translateLeft).removeClass(translateRight)
+            }, {
+                offset: '70%'
+            })
+        });
+
+    // result_block animating photo(zooming)
     $('.result').each(function () {
       $(this).find('.res-img img').each(function (i) {
         var el = $(this),

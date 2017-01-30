@@ -32,18 +32,18 @@
 
 //button styles
 .btn {
-    background: #fa8578;
-    border-radius: 5px;
-    color: #fff;
-    display: block;
-    font-size: 1.25rem;//18px
-    height: 50px;
-    line-height: 44px;
-    overflow: hidden;
-    position: relative;
-    text-align: center;
-    transition: 1s ease;
-    width: 100%;
+  background: #fa8578;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.25rem;//18px
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: 1s ease;
+  width: 100%;
 }
 
 //input styles
@@ -59,6 +59,37 @@
   &:focus {
     background: repeating-linear-gradient(-45deg, #fff, #fff 25px, #F6F4F5 25px, #F6F4F5 40px) fixed;
   }
+}
+
+//contact form styles
+.contact-form { margin-top: 30px; }
+.contact_input {
+  display: inline-block;
+  margin: 0px 10px;
+  max-width: 286px;
+  overflow: hidden;
+  position: relative;
+  //icons
+  .my_c { 
+    color: #78757f;
+    font-size: 3rem; 
+    left: 10px; 
+    top: 0px; 
+  }
+  .my_b,
+  .my_a { 
+    color: #78757f; 
+    font-size: 2rem;
+    left: 15px; 
+    top: 7px; 
+  }
+}
+
+//button
+.submit {
+  margin: 30px auto;
+  max-width: 330px;
+  &:hover { background: #a92d1f; }
 }
 
 //section padding
