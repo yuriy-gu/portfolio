@@ -2,7 +2,7 @@
                                                                    HEADER
 ====================================================================== */
 .header {
-  background: #fff;
+  background: rgba(255,255,255,.9);
   padding: 20px 0;
   position: fixed;
   top: 0;
@@ -47,6 +47,7 @@
   font-size: 1.25rem; //20px
   transition: .5s;
   transform: scale(1);
+  width: 21%;
 }
 
 .header-tel {
@@ -61,34 +62,6 @@
   }
 }
 
-.header-button {
-  background: transparent;
-  border: 3px solid #fa8578;
-  color: #4c4b4d;
-  max-width: 226px;
-  line-height: 44px;
-  &:hover { background: #fa8578; color: #fff; }
-  &::before,
-  &::after {
-    @include line($width: 0, $height: 0, $background: transparent);
-    border: 0px solid transparent;
-    transition: 1s;
-    z-index:-1;
-  }
-  &::before {
-    border-color: transparent transparent transparent #fa8578;
-    bottom: 0;
-    left: 0;
-  }
-  &::after {
-    border-color: transparent #fa8578 transparent transparent;
-    right: 0;
-    top: 0;
-  }
-  &:hover::before { border-width: 165px 0 0 165px; }
-  &:hover::after { border-width: 0 165px 165px 0; }
-}
-
 
 
 /* =====================================================================
@@ -99,21 +72,23 @@
   background-size: cover;
   box-shadow: 0px -10px 15px -7px rgba(0, 0, 0, 0.37); 
   position: relative; 
-  top: 100px; 
+  top: 100px;
+  height: 720px;
+  overflow: hidden;
   &__video {
-    height: 720px;
-    overflow: hidden;
-    position: absolute;
-    top: 0;
-    width: 100%;
-   }
+
+    video {
+      width: 100%;
+    }
+  }
  }
 
 .banner__content { 
   background: rgba(0,0,0,.2);
-  height: 720px;
-  overflow: hidden;
-  position: relative;
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .nav-left {
@@ -124,7 +99,6 @@
 .nav-right {
   @include flex($width: 35%);
   float: right;
-  text-align: right;
 }
 
 .logo {
@@ -158,6 +132,7 @@
 //proposition
 .proposition {
   background: url(../img/head_prop.png) no-repeat;
+  background-size: 100% 100%;
   height: 405px;
   margin: 50px auto;
   max-width: 585px;
@@ -214,16 +189,14 @@
                                                               REQUEST-BLOCK
 ====================================================================== */
 .request-block {
-  background: url(../img/request_bg.jpg) no-repeat;
+  background: url(../img/request_bg.jpg) no-repeat fixed;
   background-size: cover;
   margin-top: 100px;
 }
 
 .request__bg {
   background: url(../img/request_bg1.png) no-repeat;
-  background-size: contain;
-  height: 472px;
-  overflow: hidden;
+  background-size: 100% 100%;
   padding: 50px;
   text-align: center;
   width: 100%;
@@ -270,8 +243,8 @@
   }
 }
 
-.about-list .list__item:nth-child(odd) .list-text { padding-right: 6em; }
-.about-list .list__item:nth-child(even) .list-text { padding-left: 6em; }
+.about-list .list__item:nth-child(odd) .list-text { padding-right: 4em; }
+.about-list .list__item:nth-child(even) .list-text { padding-left: 4em; }
 
 .about-list .list__item:nth-child(1) .list-text::before { content: '1'; }
 .about-list .list__item:nth-child(2) .list-text::before { content: '2'; }
@@ -287,10 +260,15 @@
                                                                   VIDEO
 ====================================================================== */
 .video {
-  background: url(../img/video_bg.jpg) no-repeat;
+  background: url(../img/video_bg.jpg) no-repeat fixed;
   background-size: cover;
   text-align: center;
   &__content { padding: 0 5em; }
+  video { 
+    height: 500px; 
+    max-width: 766px; 
+    width: 100%;
+  }
 }
 
 .video_title { 
@@ -335,18 +313,10 @@
     position: static;
   }
 }
-.result__wed-name { margin: 10px 0 40px; }
+.result__wed-name { margin: 10px 0 15px; }
 .result__item { margin-bottom: 40px; }
 .result_title { color: #898888; font: 700 1.0625rem "HelveticaNeueCyr-Roman"; }
 .result_text { color: #898888; font: 1rem "HelveticaNeueCyr-Thin"; margin-top: 5px; }
-
-//button
-.open_gallery { 
-  max-width: 215px;
-  display: inline-block; 
-  cursor: pointer; 
-  &:hover { background: #ea6859; }
-}
 
 //images
 .res-img { 
@@ -376,13 +346,13 @@
   border-radius: 10px;
   box-shadow: inset 0 0 35px rgba(0,0,0,.5);
   height: 1000px;
-  left: calc(50% - 500px);
-  max-width: 1000px;
+  left: 50%;
+  margin-left: -25%;;
   padding: 20px;
   position: absolute;
   transform: scale(1.4);
   transition: 2s;
-  width: 100%;
+  width: 50vw;
   z-index: 5;
   //border in pop-up window
   &::before {
@@ -391,7 +361,7 @@
     content: '';
     display: block;
     height: 98%;
-    left: 10px;
+    left: 1%;
     position: absolute;
     top: 10px;
     width: 97.5%;
@@ -404,24 +374,13 @@
   }
 }//pop-up window end
 
-//button - more ruseluts at gallery
-.more-results {
-  border-bottom: 2px dashed;
-  color: #4a4a4a;
-  cursor: pointer;
-  display: table;
-  font: 700 37px 'HelveticaNeueCyr-Roman';
-  margin: 80px auto;
-  &:hover { border: none; }
-}
-
 
 
 /* =====================================================================
                                                                    PRICE
 ====================================================================== */
 .price_block {
-  background: url(../img/cost.jpg) no-repeat;
+  background: url(../img/cost.jpg) no-repeat fixed;
   background-size: cover;
 }
 
@@ -452,6 +411,7 @@
     color: #fff;
     font: 700 1.3125rem/45px "HelveticaNeueCyr-Roman";
     padding-left: 10px;
+    vertical-align: middle;
   }
   .guests { width: 50%; }
   .district { width: 25%;}
@@ -462,6 +422,17 @@
     padding-left: 15px;
   }
 }
+.price-small { 
+  display: none;
+  margin-bottom: 10px;
+  li {
+    border: 1px solid #333;
+    font-size: 1.2rem;
+    padding: 10px 0 ;
+  }
+  .price-small_city { font-size: 1.5rem;  font-weight: bold; }
+
+}
 
 
 
@@ -469,11 +440,16 @@
                                                                    CONTRACT
 ====================================================================== */
 .contract { margin-top: 40px; }
-.contract__item { display: inline-block; margin-bottom: 15px; overflow: hidden; }
+.contract__item { 
+  display: inline-block;
+  margin-bottom: 15px;
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
 
 .contract_photo {
   img { width: 361px; height: 361px; }
-  //number
 }
 
 .contract__item:nth-child(odd) .contract_photo { float: left; }
@@ -560,50 +536,36 @@
                                                                   TEAM
 ====================================================================== */
 .team__block {
-  background: url(../img/team_bg.jpg) no-repeat top center;
+  background: url(../img/team_bg.jpg) no-repeat fixed;
   background-size: cover;
 }
+.team__photo { @include flex($width: 100%); }
 .team__item {
-  display: inline-block;
-  max-width: 376px;
   text-align: center;
-  width: 100%;
+  width: 32%;
 }
-.team__photo_sm { height: 502px; width: 374px; }
-.team__photo_big { height: 537px; width: 374px; }
+.team__photo_sm { height: 502px;}
+.team__photo_big { height: 537px;}
 .team__photo_signature {
-  background: url(../img/team_bg.jpg)no-repeat;
-  background-size: cover;
   font: 700 1.4375rem "HelveticaNeueCyr-Roman";
   height: 93px;
   overflow: hidden;
-  padding: 15px 0 20px;
-  margin-top: 5px;
+  padding: 15px;
   text-align: center;
   span { 
     display: block;
     font-size: 1rem;
-    margin-top: 15px;
+    margin-top: 10px;
   }
 }
 
-.team__sert { margin-top: 10px; }
-.sert_item { display: inline-block; width: 33%; text-align: center;}
-.sert_sm { height: 138px; width: 195px; } 
-.sert_big { height: 253px; width: 358px; }
+.team__sert { @include flex($width: 100%); margin-top: 10px; }
+.sert_item { width: 33%; text-align: center;}
+.sert_sm { height: 138px; max-width: 195px; } 
+.sert_big { height: 253px; max-width: 358px; }
 .sert_signature {
   font: 300 1.3125rem/25px "HelveticaNeueCyr-Thin"; 
   height: 100px;
   overflow: hidden;
   margin-top: 15px;
 }
-
-/* =====================================================================
-                                                                  DICSCOUNT
-====================================================================== */
-/* =====================================================================
-                                                                  DICSCOUNT
-====================================================================== */
-/* =====================================================================
-                                                                  DICSCOUNT
-====================================================================== */

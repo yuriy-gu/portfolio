@@ -1,0 +1,23 @@
+//contact form styles
+.contact-form { margin-top: 10px; }
+.contact_input {
+  display: inline-block;
+  margin: 20px 10px;
+  max-width: 286px;
+  overflow: hidden;
+  position: relative;
+  //icons
+  .my_c { 
+    color: #78757f;
+    font-size: 3rem; 
+    left: 10px; 
+    top: 0px; 
+  }
+  .my_b,
+  .my_a { 
+    color: #78757f; 
+    font-size: 2rem;
+    left: 15px; 
+    top: 7px; 
+  }
+}

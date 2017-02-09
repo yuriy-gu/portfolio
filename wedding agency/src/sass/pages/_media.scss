@@ -1,9 +1,102 @@
 /*==========  Desktop First Method  ==========*/
+@media only screen and (max-width : 1300px) {
+  .banner__video video { width: auto; }  
+}
 
 /* Large Devices, Wide Screens */
-@media only screen and (max-width : 1200px) {}
+@media only screen and (max-width : 1200px) {
+  .header-button,
+  .res__img_big { display: none; }
+  .header-text { font-size: 1rem; }
+  .request__bg_text-top { font-size: 4rem; }
+  .video__content { padding: 0 2em; }
+  .res__img_small { height: 300px; width: 100%; }
+   .contract_photo { 
+    opacity: .7; 
+    width: 50%;
+    & img { width: 100%; }
+  }
+   .contract__text { 
+    height: 100%; 
+    width: 49%;
+    &_title { font-size: 1.2rem; }
+    &_content { font-size: 1rem; }
+   }
+   .result__name { font-size: 1.5rem; text-align: center; }
+   .result__wed-name { text-align: center; }
+   .discount_date { font-size: 3rem; }
+   .discount__right { text-align: center; }
+}
 
 /* Small Devices, Tablets */
-@media only screen and (max-width : 768px) {}
+@media only screen and (max-width : 768px) {
+  .nav-left,
+  .nav-right,
+  .res-img,
+  .table_bg .table_budget::before,
+  .contract__text::before,
+  .discount__left_img { display: none; }
+
+  .request__bg_text,
+  .block-title,
+  .video_title { font-size: 2rem; }
+
+  .about-list .list__item:nth-child(even) .list-text,
+  .about-list .list__item:nth-child(odd) .list-text { padding: 0; }
+
+  .header-text,
+  .left-side,
+  .right-side,
+  .result .text,
+  .contract_photo,
+  .contract__text,
+  .discount__left,
+  .discount__right,
+  .team__item,
+  .sert_item { width: 100%; }
+
+  .result:nth-child(odd) .text,
+  .result:nth-child(even) .text,
+  .contract__item:nth-child(odd) .contract_photo,
+  .contract__item:nth-child(even) .contract_photo,
+  .discount__left,
+  .discount__right { float: none; text-align: center; }
+
+  .header { padding: 10px 0; }
+  .nav-block { flex-direction: column; text-align: center; }
+  .header-text { margin: 5px 0; }
+  .header-tel { margin-top: 10px; }
+  .request__bg_text-top { font-size: 3rem; line-height: 40px; }
+  .list-text { height: auto; text-align: center; margin: 10px 0;}
+  #pop_gallery { left: 40%; width: 65vw; }
+  .table_bg { padding: 10px; }
+  .price-table_body-title { font-size: 1rem; line-height: 30px; }
+  .price-table_info { border: 2px solid #fa8578; text-align: center; }
+  .contract_photo { opacity: 0.5; }
+  .contract__text { background: rgba(255,255,255,.3); }
+  .contract__item:nth-child(even) .contract__text,
+  .contract__text { position: absolute; top: 0; left: 0; padding: 10px; text-align: center; color: #000; }
+  .discount__left { margin-right: 0; }
+  .team__photo,
+  .team__sert { flex-direction: column; }
+
+}
 /* Extra Small Devices, Phones */
-@media only screen and (max-width : 480px) {}
+@media only screen and (max-width : 480px) {
+  .dotted-bg::before,
+  .dotted-bg::after,
+  .video,
+  .price-table { display: none; }
+
+  .price-small { display: block; }
+  .block-title { font-size: 1.5rem; }
+  .result__name,
+  .result__wed-name { font-size: 1.2rem; }
+  .close {
+    right: 0;
+    &::after { color: #000; }
+  }
+  .contract__text_title,
+  .contract__text_content { font-size: 1rem;  line-height: 15px; }
+  .more-results { font-size: 1.8rem; }
+}

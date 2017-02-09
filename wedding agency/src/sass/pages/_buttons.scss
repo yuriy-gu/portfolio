@@ -1,0 +1,101 @@
+//button styles
+.btn {
+  background: #fa8578;
+  border-radius: 5px;
+  color: #fff;
+  display: block;
+  font-size: 1.25rem;//18px
+  height: 50px;
+  line-height: 50px;
+  overflow: hidden;
+  position: relative;
+  text-align: center;
+  transition: 1s ease;
+  width: 100%;
+}
+
+.header-button {
+  background: transparent;
+  border: 3px solid #fa8578;
+  color: #4c4b4d;
+  max-width: 20%;
+  line-height: 44px;
+  &:hover { background: #fa8578; color: #fff; }
+  &::before,
+  &::after {
+    @include line($width: 0, $height: 0, $background: transparent);
+    border: 0px solid transparent;
+    transition: 1s;
+    z-index:-1;
+  }
+  &::before {
+    border-color: transparent transparent transparent #fa8578;
+    bottom: 0;
+    left: 0;
+  }
+  &::after {
+    border-color: transparent #fa8578 transparent transparent;
+    right: 0;
+    top: 0;
+  }
+  &:hover::before { border-width: 165px 0 0 165px; }
+  &:hover::after { border-width: 0 165px 165px 0; }
+}
+
+//request button
+.submit {
+  margin: 10px auto;
+  max-width: 330px;
+  &:hover { background: #a92d1f; }
+}
+
+//result(portfolio) button
+.open_gallery { 
+  max-width: 215px;
+  display: inline-block; 
+  cursor: pointer; 
+  &:hover { background: #ea6859; }
+}
+
+//button - more ruseluts at gallery
+.more-results {
+  border-bottom: 2px dashed;
+  color: #4a4a4a;
+  cursor: pointer;
+  display: table;
+  font: 700 2.3rem 'HelveticaNeueCyr-Roman';
+  margin: 80px auto;
+  &:hover { border: none; }
+}
+
+//close button
+.close {
+  cursor: pointer;
+  height: 30px;
+  position: absolute;
+  right: -40px;
+  top: 0px;
+  width: 30px;
+  &::after {
+    content: "X";
+    color: #fff;
+    font-size: 30px;
+  }
+}
+
+//go back to top
+#toTop {
+  background: url(../img/back_to_top_icon.png) no-repeat;
+  background-size: contain;
+  bottom: 10%;
+  cursor: pointer;
+  display: none;
+  height: 60px;
+  position: fixed;
+  right: 10%;
+  transition: 1s;
+  width: 60px;
+  &:hover {
+    transform: scale(1.5);
+  }
+}

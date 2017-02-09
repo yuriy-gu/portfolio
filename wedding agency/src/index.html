@@ -52,16 +52,10 @@
         <li class="nav__item">
           <a href="#team_block" class="nav__text-style underline">команда</a>
         </li>
-        <li class="nav__item">
-          <a href="#" class="nav__text-style underline">отзывы</a>
-        </li>
-        <li class="nav__item">
-          <a href="#" class="nav__text-style underline">контакты</a>
-        </li>
       </ul>
 
-      <p class="header-text">Организация свадьбы<br /> Вашей мечты</p>
-      <p class="header-text">Работаем в Москве, МО,<br /> а так же в Сочи, Крыму и Европе</p>
+      <p class="header-text">Организация свадьбы Вашей мечты</p>
+      <p class="header-text">Работаем в Москве, МО, Сочи, Крыму и Европе</p>
       <p class="header-tel"><i class="my my_a"></i> +7 (926) <span>123-45-67</span></p>
       <a href="#" class="btn header-button"> заказать звонок</a>
 
@@ -76,7 +70,7 @@
   <section class="banner">
 
     <div class="banner__video"> 
-      <video autoplay width="100%" loop>
+      <video autoplay loop>
         <source src="video/banner_video/banner_video.ogv" type='video/ogg; codecs="theora, vorbis"'>
         <source src="video/banner_video/banner_video.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         <source src="video/banner_video/banner_video.webm" type='video/webm; codecs="vp8, vorbis"'>
@@ -94,20 +88,14 @@
             <li class="nav__item">
               <a href="#portfolio_block" class="nav__text-style line dbl-line">портфолио</a>
             </li>
-            <li class="nav__item">
-              <a href="#price_block" class="nav__text-style line dbl-line">цены</a>
-            </li>
           </ul>
 
           <ul class="nav-right">
             <li class="nav__item">
+              <a href="#price_block" class="nav__text-style line dbl-line">цены</a>
+            </li>
+            <li class="nav__item">
               <a href="#team_block" class="nav__text-style line dbl-line">команда</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__text-style line dbl-line">отзывы</a>
-            </li>
-            <li class="nav__item">
-              <a href="#" class="nav__text-style line dbl-line">контакты</a>
             </li>
           </ul>
 
@@ -233,7 +221,7 @@
     <div class="video__content wrapper">
       <h2 class="video_title">КАЖДАЯ СВАДЬБА УНИКАЛЬНА И ТРЕБУЕТ СЛОЖНОЙ, ДЛИТЕЛЬНОЙ ПОДГОТОВКИ.</h2>
       <p class="video_text">Предложим Вам такие решения, о которых Вы сами даже не догадывались.</p>
-      <video controls="controls" poster="video/video_block/poster.jpg" height="500" width="766">
+      <video controls="controls" poster="video/video_block/poster.jpg">
         <source src="video/video_block/video_block.ogv" type='video/ogg; codecs="theora, vorbis"'>
         <source src="video/video_block/video_block.mp4" type='video/mp4; codecs="avc1.42E01E, mp4a.40.2"'>
         <source src="video/video_block/video_block.webm" type='video/webm; codecs="vp8, vorbis"'>
@@ -597,6 +585,19 @@
           </tr>
         </tbody>
       </table>
+
+      <ul class="price-small">
+        <li class="price-small_city">Москва</li>
+        <li>до 30 человек, 1 координатор, 20 тысяч рублей</li>
+        <li>до 60 человек, 2 координатор, 30 тысяч рублей</li>
+        <li>до 90 человек, 3 координатор, 40 тысяч рублей</li>
+        <li>более 90 человек, 4 координатор, 50 тысяч рублей</li>
+        <li class="price-small_city">Московская область</li>
+        <li>до 30 человек, 1 координатор, 25 тысяч рублей</li>
+        <li>до 60 человек, 2 координатор, 35 тысяч рублей</li>
+        <li>до 90 человек, 3 координатор, 45 тысяч рублей</li>
+        <li>более 90 человек, 4 координатор, 60 тысяч рублей</li>
+      </ul>
       <p class="table_budget">Мы организуем свадьбы с бюджетом от 500.000 рублей</p>
     </div><!-- table_bg end -->
   </div><!-- wrapper end -->
@@ -793,10 +794,8 @@
 
 
   <!-- =====================================================================
-                                                              BANNER
+                                                              OTHERS
   ====================================================================== -->
-  
-
   <div id="overlay"></div>
   <!-- photo-gallery from result -->
   <div id="pop_gallery" class="hidden">
@@ -805,6 +804,9 @@
     <p class="result__wed-name"></p>
     <div class="pop_foto"></div>
   </div>
+
+  <div id="toTop"></div>
+
 
 <script src='libs/JQuery/jquery-3.1.1.min.js'></script>
 <script src="libs/Waypoints/jquery.waypoints.min.js"></script>
