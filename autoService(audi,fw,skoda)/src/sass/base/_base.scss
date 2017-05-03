@@ -1,0 +1,57 @@
+body {
+  background: #4c4b4d;
+  color: #fff;
+  font-family: "GothaProReg" sans-serif;
+  font-size: 16px;
+  position: relative;
+  min-width: 320px;
+  height: 100%;
+}
+
+a {
+  color: #fff;
+  display: block;
+}
+
+strong { font-weight: bold; font-size: 1.25rem; }
+
+img {
+  width: 100%;
+  height: 100%;
+}
+
+input {
+  border: none;
+  outline: none;
+}
+
+button {
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  outline: none;
+}
+
+p {
+  color: #131313;
+  font: 300 1.125rem 'GothaProReg';
+}
+
+h1 {
+  text-align: center;
+  font: 700 1.9375rem/1.45em 'GothaProReg';
+  text-transform: uppercase;
+}
+h2 {
+  color: #000;
+  font: 700 2.375rem / 1.36em 'GothaProReg';
+  text-align: center;
+}
+h3 {
+  color: #000;
+  font: 700 1.5625rem / 1.333em 'GothaProReg';
+}
+h4 {
+  color: #131313;
+  font: 700 1.5625rem 'GothaProReg';
+}

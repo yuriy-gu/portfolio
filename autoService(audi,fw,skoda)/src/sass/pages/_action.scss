@@ -1,0 +1,84 @@
+/* =====================================================================
+                                                                   ACTION STYLES
+====================================================================== */
+.action {
+  background: url(../img/action.jpg) no-repeat;
+  background-size: cover;
+  padding: 4em 0;
+  min-height: 400px;
+}
+
+.action__date {
+  color: #fff;
+  font-weight: 500;
+  position: relative;
+  width: 18%;
+  strong {
+    color: #fefefe;
+    font-size: 3.125rem;
+    display: block;
+    margin-bottom: 10px;
+  }
+  .my {
+    animation: rotate infinite linear 3s;
+    font-size: 8rem;
+    color: #fff;
+    position: absolute;
+    top: 1em;
+    left: calc(50% - 64px);
+  }
+}
+
+.action__content {
+  width: 70%;
+  &_header { font-size: 2.25rem; color: #fff; }
+  .line::after {
+    height: 9px;
+    width: 263px;
+    background: #fff;
+    margin: 10px 0;
+  }
+  &_text {
+    color: #ffffff;
+    font-size: 2.125rem;
+    margin: 26px 0;
+    text-transform: uppercase;
+  }
+}
+
+/* =====================================================================
+                                                                   ACTION2
+====================================================================== */
+.action2_img {
+  position: relative;
+  .my {
+    font-size: 15rem;
+    color: #fff;
+    line-height: 12rem;
+  }
+}
+.action2_descripton {
+  width: 75%;
+  h3 {
+    font-size: 2rem;
+    font-weight: 400;
+    color: #fff;
+    &:after {
+    height: 9px;
+    width: 263px;
+    background: #fff;
+    margin: 20px 0;
+    }
+  }
+  .action2_title {
+    color: #fff;
+    font-size: 2rem;
+    text-transform: uppercase;
+  }
+}
+.form_title {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #fff;
+  margin: 20px 0;
+}

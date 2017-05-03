@@ -1,0 +1,19 @@
+// @import "base/**/*";
+@import 'base/_normalize';
+@import 'base/_fonts';
+@import 'base/_base';
+
+// slick slider styles
+@import 'libs/Slick-slider/slick';
+@import 'libs/Fancybox/fancybox';
+
+//@import 'pages/**/*';
+@import 'pages/_variables';
+// @import 'pages/_mixins';
+@import 'pages/_animation';
+@import 'pages/_globalStyles';
+@import 'pages/_buttons';
+// @import 'pages/_form';
+@import 'pages/_action';
+@import 'pages/_styles';
+@import 'pages/_media';

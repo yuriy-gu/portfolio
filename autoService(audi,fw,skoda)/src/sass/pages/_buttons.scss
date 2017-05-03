@@ -1,0 +1,50 @@
+.btn {
+  color: #fff;
+  width: 100%;
+  font: 500 1rem 'GothaProReg';
+  border-radius: 40px;
+  text-align: center;
+  line-height: 43px;
+  transition: .5s;
+}
+
+.header_btn {
+  border: 2px solid #4ba82e;
+  max-width: 221px;
+  height: 47px;
+  line-height: 43px;
+  margin-top: 17px;
+  &:hover { background: #4ba82e; }
+}
+
+.banner_btn {
+  border: 2px solid #4ba82e;
+  margin-top: 80px;
+  background: #4ba82e;
+  max-width: 516px;
+  height: 71px;
+  line-height: 67px;
+  font-size: 1.125rem;
+  &:hover { background: transparent;}
+}
+
+.form_btn {
+  border: 2px solid #fff;
+  height: 51px;
+  max-width: 264px;
+  background: #fff;
+  color: #333;
+ &:hover { background: transparent; color: #fff; } 
+}
+
+.catch_btn {
+  border: 2px solid #4ba82e;
+  background: #4ba82e;
+  width: 26%;
+  height: 50px;
+  line-height: 50;
+  font: 500 1rem 'GothaProReg';
+  margin-right: 3%;
+  transition: .3s;
+  &:hover { background: #fff; color: #4ba82e; }
+}

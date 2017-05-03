@@ -1,0 +1,66 @@
+@font-face {
+  font-family: "GothaProReg";
+  src: url("../fonts/GothaProReg/GothaProReg.eot");
+  src: url("../fonts/GothaProReg/GothaProReg.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/GothaProReg/GothaProReg.woff") format('woff'),
+       url("../fonts/GothaProReg/GothaProReg.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Kudriashov";
+  src: url("../fonts/Kudriashov/Kudriashov.eot");
+  src: url("../fonts/Kudriashov/Kudriashov.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/Kudriashov/Kudriashov.woff") format('woff'),
+       url("../fonts/Kudriashov/Kudriashov.ttf") format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+// svg icons
+@font-face {
+  font-family: 'flaticon';
+  src: url("../fonts/flaticon/flaticon.eot");
+  src: url("../fonts/flaticon/flaticon.eot?#iefix") format('embedded-opentype'),
+       url("../fonts/flaticon/flaticon.woff") format('woff'),
+       url("../fonts/flaticon/flaticon.ttf") format('truetype'),
+       url("../fonts/flaticon/flaticon.svg#myfonts") format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+.my {
+  color: #666;
+  display: inline-block;
+  font-family: 'flaticon';
+  font-size: 16px;
+  font-style: normal;
+  position: absolute;
+  text-rendering: auto;
+  text-transform: none;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+.my_a:before { content: 'a'; }
+.my_b:before { content: 'b'; }
+.my_c:before { content: 'c'; }
+.my_d:before { content: 'd'; }
+.my_e:before { content: 'e'; }
+.my_f:before { content: 'f'; }
+.my_g:before { content: 'g'; }
+.my_h:before { content: 'h'; }
+.my_i:before { content: 'i'; }
+.my_j:before { content: 'j'; }
+.my_k:before { content: 'k'; }
+.my_l:before { content: 'l'; }
+.my_m:before { content: 'm'; }
+.my_n:before { content: 'n'; }
+.my_o:before { content: 'o'; }
+.my_p:before { content: 'p'; }
+.my_q:before { content: 'q'; }
+.my_r:before { content: 'r'; }
+.my_s:before { content: 's'; }
+.my_t:before { content: 't'; }
+.my_u:before { content: 'u'; }
+.my_v:before { content: 'v'; }
+
