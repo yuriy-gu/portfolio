@@ -1,0 +1,38 @@
+//recall form styles
+.recall-form {
+  .form-control {
+    border-color: #b0b0b0;
+    border-radius: 0;
+    margin-bottom: 10px;
+    font-size: 1.142857142857143em; //16px
+    color: #232323;
+    height: 42px;
+    line-height: 42px;
+    padding-left: 20px;
+    width: 100%;
+    max-width: 270px;
+    transition: translate(0, 200px);
+    transition: .2s;
+    &::-webkit-input-placeholder {color:#232323; }
+    &::-moz-placeholder {color:#232323; }/* Firefox 19+ */
+    &:-moz-placeholder {color:#232323; }/* Firefox 18- */
+    &:-ms-input-placeholder {color:#232323; }
+    &:focus::-webkit-input-placeholder {
+      transition: .5s ease-in-out;
+      transform: translate(30%, 0);
+      opacity: 0;
+    }
+    &:focus::-moz-placeholder {
+      transition: .5s ease-in-out;
+      transform: translate(30%, 0);
+      opacity: 0; 
+    }
+    @media (max-width: 992px) {
+      font-size: 1em;
+      max-width: 225px;
+      height: 33px;
+      line-height: 33px;
+    }
+    @media (max-width: 767px) { margin: 0 auto 10px; max-width: 209px; }
+  }
+}

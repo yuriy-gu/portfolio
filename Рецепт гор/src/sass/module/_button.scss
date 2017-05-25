@@ -1,0 +1,39 @@
+.btn {
+  border-radius: 0;
+  border: 1px solid #000;
+  font-family: "Rubik-Medium";
+  font-size: 1.142857142857143em; //16px
+  text-transform: uppercase;
+  &:hover { color: #fff; }
+}
+
+.header-btn {
+  background: transparent;
+  padding: 18px 0;
+  max-width: 240px;
+  width: 100%;
+  transition: .2s;
+  &:hover {
+    background: #232323;
+    color: #fff;
+  }
+  @media (max-width: 992px) { padding: 11px 0; font-size: 1em; } 
+}
+
+.btn-recall {
+  background: #232323;
+  color: #fff;
+  height: 50px;
+  margin-bottom: 10px;
+  max-width: 270px;
+  text-align: center;
+  transition: .2s;
+  width: 100%;
+  &:hover { opacity: .9; }
+  @media (max-width: 992px) {
+    font-size: 0.8571428571428571em;
+    max-width: 225px;
+    height: 39px;
+  }
+  @media (max-width: 992px) { max-width: 209px; }
+}

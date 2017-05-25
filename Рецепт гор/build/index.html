@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Рецепт гор</title>
+  <meta name="description" content="Рецепт гор">
+  <meta name="author" content="">
+  <!-- favicon -->
+  <link rel="apple-touch-icon" sizes="57x57" href="/img/favicon/apple-icon-57x57.png">
+  <link rel="apple-touch-icon" sizes="60x60" href="/img/favicon/apple-icon-60x60.png">
+  <link rel="apple-touch-icon" sizes="72x72" href="/img/favicon/apple-icon-72x72.png">
+  <link rel="apple-touch-icon" sizes="76x76" href="/img/favicon/apple-icon-76x76.png">
+  <link rel="apple-touch-icon" sizes="114x114" href="/img/favicon/apple-icon-114x114.png">
+  <link rel="apple-touch-icon" sizes="120x120" href="/img/favicon/apple-icon-120x120.png">
+  <link rel="apple-touch-icon" sizes="144x144" href="/img/favicon/apple-icon-144x144.png">
+  <link rel="apple-touch-icon" sizes="152x152" href="/img/favicon/apple-icon-152x152.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="/img/favicon/apple-icon-180x180.png">
+  <link rel="icon" type="image/png" sizes="192x192"  href="/img/favicon/android-icon-192x192.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/img/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="/img/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/img/favicon/favicon-16x16.png">
+  <link rel="manifest" href="/img/favicon/manifest.json">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+  <meta name="theme-color" content="#ffffff">
+  <!-- favicon / End -->
+
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css">
+</head>
+<body>
+
+
+
+<!--  ===============================================================================
+==================================     HEADER          ==================================
+===============================================================================  -->
+  <header class="header">
+    <div class="container">
+      <div class="row">
+
+        <div class="col-sm-3 col-xs-12 logo">
+          <img src="img/logo.png" alt="Рецепт гор">
+        </div>
+
+        <div class="col-sm-2 hidden-xs">
+          <img src="img/test-tube.png" alt="test-tube" class="header-img">
+          <p class="header-text">Проверено клиническими испытаниями</p>
+        </div>
+
+        <div class="col-sm-2 hidden-xs">
+          <img src="img/branches.png" alt="branches" class="header-img">
+          <p class="header-text">100% натуральный состав</p>
+        </div>
+
+        <div class="col-sm-2 hidden-xs">
+          <img src="img/discount.png" alt="discount" class="header-img">
+          <p class="header-text">75% скидка только<br /> сегодня</p>
+        </div>
+
+        <div class="col-sm-3 hidden-xs">
+          <button class="btn header-btn orderCall">ЗАКАЗАТЬ ЗВОНОК</button>
+        </div>
+
+      </div>
+    </div>
+  </header>
+
+
+
+<!--  ===============================================================================
+==================================     BANNER          ==================================
+===============================================================================  -->
+  <section class="banner">
+    <div class="container">
+      <div class="row">
+        <div class="col-xs-12  col-lg-10 col-lg-offset-1 banner__content">
+
+          <h1 class="section-title">Рецепт гор избавит от боли в суставах навсегда всего за 10 дней!</h1>
+          <p class="product-descr">Уникальный гель из маточного молочка горных пчел быстро снимет боль в суставах!</p>
+          
+          <div class="left-col">
+            <p class="price">Всего за <strong class="old-price">3960 руб.</strong> <span class="new-price">990 руб.</span></p>
+                
+            <p class="clock-title">до окончания акции осталось:</p>
+            <div id="clock" class="clock clearfix">
+
+              <div class="hour">
+                <p class="number-style hour0"></p>
+                <p class="number-style hour1"></p>
+                <p class="time-text">Часов</p>
+              </div>
+
+              <div class="min">
+                <p class="number-style min0"></p>
+                <p class="number-style min1"></p>
+                <p class="time-text">Минут</p>
+              </div>
+
+              <div class="sec">
+                <p class="number-style sec0"></p>
+                <p class="number-style sec1"></p>
+                <p class="time-text">Секунд</p>
+              </div>
+
+            </div> <!-- clock / END -->
+
+            <form action="#" name="recall" class="recall-form">
+              <input type="text" class="form-control" id="name" placeholder="Имя">
+              <input type="tel" class="form-control" id="tel" placeholder="Телефон">
+              <input type="text" class="form-control" id="country" placeholder="Страна">
+              <button type="submit" class="btn btn-recall orderCall">заказать звонок</button>
+            </form>
+            <p class="today-ordered">Сегодня уже купили: <strong>229</strong> человек</p>
+            <p class="product-img__descr"><strong>ВНИМАНИЕ!</strong> Акционное предложение ограничено. Осталось товаров<br />со скидкой: <span class="new-price">5 шт.</span></p>
+          </div>
+
+          <div class="product-img">
+            <figure>
+              <img src="img/product.png" alt="Рецепт гор" width="230" height="421">
+            </figure>
+          </div>
+
+        </div> <!-- banner__content / END -->
+      </div><!-- row / END -->
+    </div><!-- container / END -->
+  </section>
+
+
+
+<!--  ===============================================================================
+==================================     BADGES          ==================================
+===============================================================================  -->
+<section class="badges">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12 text-center">
+        <img src="img/badge1.png" alt="world slim food award" height="99" width="99">
+        <img src="img/badge2.png" alt="институт биомолекулярных технологий: одобрено" height="100" width="112">
+        <img src="img/badge3.png" alt="world association: approved " height="98" width="97">
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+<!--  ===============================================================================
+==================================     ABOUT US          ==================================
+===============================================================================  -->
+<section class="about-us">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <h2 class="section-title">Почему нас выбирают?</h2>
+        <p class="section-subTitle">Наши преимущества.</p>
+
+        <div class="about-us__img-wrap">
+          <figure>
+            <img src="img/why-us1.png" alt="">
+            <figcaption>
+              Запускает процесс регенрации поврежденных тканей за счет синергического действия натуральных компонентов.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/why-us2.png" alt="">
+            <figcaption>
+              Содержит уникальное маточное молочко горных пчел.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/why-us3.png" alt="">
+            <figcaption>
+              Устраняет не только боль, но и причину болезни с помощью редкого сочетания компонентов.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/why-us4.png" alt="">
+            <figcaption>
+              Выпущен<br />ограниченной серией.
+            </figcaption>
+          </figure>
+
+          <figure>
+            <img src="img/why-us5.png" alt="">
+            <figcaption>
+              Прошел клинические испытания в<br />Российском<br />научно-исследовательс ком институте им. Е. М. Александрова.
+            </figcaption>
+          </figure>
+        </div> <!-- img-wrap / END -->
+
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+<!--  ===============================================================================
+==================================     CONSEQUNCES          ============================
+===============================================================================  -->
+<section class="consequences">
+  <div class="container">
+    <div class="row">
+
+    <h2 class="section-title">Последствия болезней суставов</h2>
+    <h3 class="section-subTitle">Болезни суставов превразщают жизнь человека в ад!</h3>
+      <div class="col-sm-4">
+        <figure>
+          <img src="img/pain.png" alt="Невыносимая боль">
+          <figcaption class="img-descr">
+            <strong class="img-title">боль</strong>
+            Невыносимая боль,<br />скованность движений, деформация костей - это<br />лишь некоторые симптомы артрита и артроза.
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="col-sm-4">
+        <figure>
+          <img src="img/disability.png" alt="инвалидность">
+          <figcaption class="img-descr">
+            <strong class="img-title">инвалидность</strong>
+            Запущенный артрит и артроз приводит человека к<br />параличу и инвалидности!
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="col-sm-4">
+        <figure>
+          <img src="img/Helplessness.png" alt="беспомощность">
+          <figcaption class="img-descr">
+            <strong class="img-title">беспомощность</strong>
+            Полная потеря<br />дееспособности и жизнь без движения - вот, что вам<br />грозит, если вы вовремя не предпримите меры!
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="row">
+        <div class="col-sm-10 col-sm-offset-1">
+          <p class="about-us__bttm-text">А вы готовы до конца своих дней жить, превозмогая боль, в постоянном страхе стать беспомощным?</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+
+<!--  ===============================================================================
+==================================     FOOTER          ============================
+===============================================================================  -->
+<footer class="footer">
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-12">
+        <addres class="footer-info">ООО "Практика" ИНН 77431128959, ОГРН 5157746073580 г. Москва, ул. Клары Цеткин, д. 29, корп. 1, пом. 6, ком. 8</addres>
+        <a href="#" class="confidential">Политика конфиденциальности</a>
+      </div>
+    </div>
+  </div>
+</footer>
+
+
+
+<!--  ===============================================================================
+==================================     POP-UP          ==================================
+===============================================================================  -->
+<div class="overlay"></div>
+<div class="pop-up">
+  <div class="banner__content  clearfix">
+    <span class="glyphicon glyphicon-remove"></span>
+
+    <h1 class="section-title">Рецепт гор избавит от боли в суставах навсегда всего за 10 дней!</h1>
+    <p class="product-descr">Уникальный гель из маточного молочка горных пчел быстро снимет боль в суставах!</p>
+    
+    <div class="left-col">
+      <p class="price">Всего за <strong class="old-price">3960 руб.</strong> <span class="new-price">990 руб.</span></p>
+          
+      <p class="clock-title">до окончания акции осталось:</p>
+      <div class="clock clearfix">
+
+        <div class="hour">
+          <p class="number-style hour0"></p>
+          <p class="number-style hour1"></p>
+          <p class="time-text">Часов</p>
+        </div>
+
+        <div class="min">
+          <p class="number-style min0"></p>
+          <p class="number-style min1"></p>
+          <p class="time-text">Минут</p>
+        </div>
+
+        <div class="sec">
+          <p class="number-style sec0"></p>
+          <p class="number-style sec1"></p>
+          <p class="time-text">Секунд</p>
+        </div>
+
+      </div> <!-- clock / END -->
+
+      <form action="#" name="recall" class="recall-form">
+        <input type="text" class="form-control" id="name" placeholder="Имя">
+        <input type="tel" class="form-control" id="tel" placeholder="Телефон">
+        <input type="text" class="form-control" id="country" placeholder="Страна">
+        <button type="submit" class="btn btn-recall">заказать звонок</button>
+      </form>
+      <p class="today-ordered">Сегодня уже купили: <strong>229</strong> человек</p>
+      <p class="product-img__descr"><strong>ВНИМАНИЕ!</strong> Акционное предложение ограничено. Осталось товаров<br />со скидкой: <span class="new-price">5 шт.</span></p>
+    </div>
+
+    <div class="product-img">
+      <figure>
+        <img src="img/product.png" alt="Рецепт гор" width="230" height="421">
+      </figure>
+    </div>
+
+  </div>
+</div> <!-- pop-up / END -->
+
+<div class="pop-up__visitor pop-up__info">
+  <span class="glyphicon glyphicon-remove pop-up__info_close"></span>
+  <p class="pop-up__info_content">Количетсво посетителей на сайте:</p>
+  <p class="pop-up__info_number">172</p>
+</div>
+
+<div class="pop-up__recall pop-up__info">
+  <span class="glyphicon glyphicon-remove pop-up__info_close"></span>
+  <p class="pop-up__info_content">Ольга М. сделала заявку на обратный звонок</p>
+</div>
+
+<div class="pop-up__purchase pop-up__info">
+  <span class="glyphicon glyphicon-remove pop-up__info_close"></span>
+  <p class="pop-up__info_content">Ольга М. только что совершила покупку на сумму 5600 руб.</p>
+</div>
+
+
+
+
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="crossorigin="anonymous"></script>
+  <script src='https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js'></script>
+  <script src='js/main.js'></script>
+
+</body>
+</html>
