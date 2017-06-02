@@ -1,0 +1,32 @@
+$primary-color: #ffe600;
+$dark-blue: #131a1d;
+
+$section-title__color: #515151;
+$section-subTitle__color:  #000;;
+$section-content__color: #707070;
+
+//section backgrounds
+$work-process__bg: $dark-blue;
+$proud__bg: $dark-blue;
+$team__bg: #fbfbfb;
+$team-member-info__bg: #131316;
+$skills__bg: $dark-blue;
+$client-comments: $dark-blue;
+$contact-form__bg: $dark-blue;
+$footer__bg: #131316;
+
+@mixin flex ($flex-direction, $align-items, $justify-content){
+  display: flex;
+  flex-direction: $flex-direction;
+  align-items: $align-items;
+  justify-content: $justify-content;
+}
+
+@mixin circle ($width, $height) {
+  position: relative;
+  background: $primary-color;
+  border-radius: 50%;
+  width: $width;
+  height: $height;
+  transition: .5s;
+}

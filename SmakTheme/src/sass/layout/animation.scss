@@ -1,0 +1,16 @@
+@keyframes clock {
+	from { transform: rotate(0deg); }
+	to { transform: rotate(360deg); }
+}
+
+@keyframes hand {
+	0% { transform: rotateZ(30deg); }
+	50% { transform: rotateZ(-30deg); }
+	100% { transform: rotateZ(30deg); }
+}
+
+@keyframes dialog {
+	0% {opacity: 0; }
+	50% { opacity: 1; }
+	100% { opacity: 0; }
+}

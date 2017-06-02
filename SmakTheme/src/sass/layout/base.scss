@@ -1,0 +1,19 @@
+body {
+  color: #515151;
+  font-family: "Oswald-Regular";
+  min-width: 320px;
+  overflow-x: hidden;
+}
+
+ul, li { list-style: none; padding: 0; }
+
+a:hover, a:focus { text-decoration: none; outline: none; }
+
+h1 { 
+  color: #fff;
+  font-family: "Oswald-Bold";
+  font-size: 4.618571428571429em; //64.66px
+}
+h1, h2, h3, h4 { margin: 0; }
+
+img { width: 100%; }

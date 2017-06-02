@@ -1,0 +1,57 @@
+.btn { 
+  border-radius: 0;
+  border: none;
+  transition: .3s;
+  width: 100%;
+  position: relative;
+  overflow: hidden;
+  z-index: 1;
+  &::before,
+  &::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 0;
+    border: 0 solid transparent;
+    transition: .7s;
+    z-index: -1;
+  }
+  &::before { bottom: 0; left: 0; }
+  &::after { right: 0; top: 0; }
+  &:hover::before { border-width: 165px 0 0 165px; }
+  &:hover::after { border-width: 0 165px 165px 0; }
+  &:hover { border: none; }
+}
+
+//banner button
+.banner-btn {
+  background: $primary-color;
+  color: #000;
+  font-size: 1.428571428571429em; //20px
+  margin-top: 45px;
+  height: 58px;
+  max-width: 230px;
+  &:hover { color: $primary-color; }
+  &::before { border-color: transparent transparent transparent #fff; }
+  &::after { border-color: transparent #fff transparent transparent; }
+}
+
+//portfolio button
+.tab-btn {
+  background: $primary-color;
+  color:  #fff;
+  font-family: "Oswald-Bold";
+  font-size: 1.428571428571429em; //20px
+  margin-top: 15px;
+  max-width: 170px;
+  height: 58px;
+  padding: 0;
+  line-height: 58px;
+  &:hover { color: $primary-color; }
+  &::before { border-color: transparent transparent transparent #131316; }
+  &::after { border-color: transparent #131316 transparent transparent; }
+}
+
+.likePortfolio-btn { margin-top: 55px; }
+
+.contact-form__btn { margin-top: 0; }

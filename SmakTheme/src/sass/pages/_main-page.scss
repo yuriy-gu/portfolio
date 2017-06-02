@@ -1,0 +1,561 @@
+/* ==============================================================================
+=================================     HEADER      ==================================
+ ==============================================================================*/
+.header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: rgba(0,0,0,.5);
+  padding-bottom: 20px;
+  z-index: 10;
+}
+
+.logo-img { width: 105px; height: 59px; } 
+
+.header-nav {
+  @include flex(row, center, space-between)
+  padding-top: 12px;
+
+  .nav__item {
+    a {
+      color: #fff;
+      font-family: "Oswald-Bold";
+      transition: .2s;
+      display: block;
+      position: relative;
+      padding-left: 27px;
+      &:hover,
+      &:focus { background-color: transparent; color: $primary-color; }
+    }
+    .nav-active { color: $primary-color; }
+  }
+}
+
+
+
+/* ==============================================================================
+=================================     BANNER      ==================================
+ ==============================================================================*/
+ .banner-bg {
+  background: url(../img/banner.jpg)no-repeat;
+  background-size: cover;
+  position: relative;
+  padding: 375px 0 290px;
+ }
+
+ .banner__content-wrapper {
+  background: rgba(0,0,0,.5);
+  padding: 60px 0;
+
+  .banner__content {
+    font-family: "Oswald-Bold";
+    text-align: center;
+    // max-width: 780px;
+    margin: 0 auto;
+  }
+ }
+
+
+
+ /* ==============================================================================
+=================================     SERVICES      ==================================
+ ==============================================================================*/
+.service__images {
+  margin-top: 50px;
+  .service__image-block { @include flex(column, center, center); }
+
+  .img-block__circle {
+    @include flex(row, center, center)
+    @include circle(106px, 106px)
+    margin-bottom: 20px;
+    overflow: hidden;
+    &::before,
+    &::after {
+      content: '';
+      background: #fff;
+      border: 2px solid #000;
+      height: 50%;
+      position: absolute;
+      transition: .4s ease-out;
+      width: 100%;
+    }
+    &::before {
+      top: 50%;
+      transform: translateY(100%) scale(.8);
+      border-bottom-left-radius: 50px;
+      border-bottom-right-radius: 50px;
+      border-top: 0;
+    }
+    &::after {
+      border-bottom: 0;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%) scale(.8);
+      border-top-left-radius: 50px;
+      border-top-right-radius: 50px;
+    }
+    &:hover::before,
+    &:hover::after { transform: translateY(0) scale(1); }
+
+    &:hover .fa {
+      color: $primary-color;
+      z-index: 1;
+    }
+
+    .fa { 
+      color: #fff;
+      font-size: 2.857142857142857em; //40px
+      transition: .5s;
+    }
+  }
+
+  .img-block__title {
+    color: #000;
+    font-family: "Oswald-Bold";
+    font-size: 1.428571428571429em; //20px
+    margin-bottom: 20px;
+  }
+}
+
+
+
+
+ /* ==============================================================================
+==============================     HOW WE DO IT      =================================
+ ==============================================================================*/
+.work-process {
+  background: $work-process__bg;
+  color: #fff; 
+  padding-bottom: 75px;
+
+  .section-subTitle { color: $primary-color; }
+
+  .section-content { color: #fff; margin-bottom: 60px; }
+
+  .fa {
+    font-size: 3.142857142857143em; //44px
+    color: $primary-color;
+  }
+  .fa-truck { transform: rotateY(180deg); }
+
+  .img-block__title {
+    font-family: "Oswald-Bold";
+    font-size: 1.428571428571429em; //20px
+    margin: 25px 0 20px;
+  }
+
+  .process-descr { margin: 0; }
+}
+
+
+
+ /* ==============================================================================
+===============================     PORTFOLIO      ==================================
+ ==============================================================================*/
+.portfolio {
+  //tab navigation
+  .nav-tabs {
+    border-bottom: none;
+    justify-content: center;
+    margin: 45px 0 60px;
+    li {
+      a {
+        border: none;
+        color: #515151;
+        font-size: 1.142857142857143em; //16px
+        padding: 0 30px;
+        &:hover, &:focus, &:active { color: $primary-color; background: none; border: none; }
+      }
+    }
+    .active a { color: $primary-color; }
+  }
+
+  //tab content
+  .tab-content.active { @include flex(row, center, center); }
+  .tab-title {
+    font-size: 1.785714285714286em; //25px
+    margin-bottom: 20px;
+  }
+}
+
+
+//works 
+.our-works {
+  padding: 0;
+  margin: 65px -7px;
+  a {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 16.6vw;
+    &::before, 
+    &::after {
+      background: rgba(0,0,0,.4);
+      color: #fff;
+      height: 50%;
+      position: absolute;
+      transition:  .4s ease-out;
+      width: 100%;
+     }
+    &::after {
+      content: attr(data-title);
+      border-bottom: 1px dashed #fff;
+      font-size: 3em; //42px
+      padding-top: 35px;
+      top: 0;
+      left: 0;
+      transform: translateY(-100%) scale(.8);
+    }
+    &::before {
+      content: attr(data-description) ;
+      font-size: 1em; //14px
+      padding: 20px;
+      text-align: justify;
+      top: 50%;
+      transform: translateY(100%) scale(.8);
+    }
+    &:hover::before,
+    &:hover::after { transform: translateY(0) scale(1); }
+  }
+    
+  img { height: 250px; max-width: 320px; }
+  }
+
+
+
+ /* ==============================================================================
+=================================     PROUD      ==================================
+ ==============================================================================*/
+.proud {
+  background: $proud__bg;
+  .section-subTitle,
+  .section-content,
+  .box-number { color: #fff; }
+
+  .proud-box__wrapper {
+    @include flex(row, center, space-between);
+    margin-top: 60px;
+  }
+   .proud-box {
+    border: 1px solid $primary-color;
+    padding: 20px 0;
+    margin-right: 30px;
+    max-width: 270px;
+    width: 100%;
+    &:last-child { margin-right: 0; }
+
+    .box-number {
+      font-family: "Oswald-Bold";
+      font-size: 2.857142857142857em; //40px
+      margin-bottom: 5px;
+    }
+
+    .box-content {
+      font-size: 1.142857142857143em; //16px
+      color: $primary-color;
+    }
+  }
+}
+
+
+
+ /* ==============================================================================
+=================================     ABOUT US      ==================================
+ ==============================================================================*/
+.about-us__content-wrapper {
+  margin-top: 75px;
+  text-align: left; 
+
+  .about-us__box {
+    margin-bottom: 50px;
+    transition: .5s;
+    cursor: pointer;
+    &:hover { transform: scale(1.2); z-index: 1;}
+  }
+
+  .about-img {
+    @include circle(71px, 71px)
+    float: left;
+    margin-right: 25px;
+    margin-bottom: 30px;
+    padding-top: 20px;
+    text-align: center;
+
+    .fa { 
+      font-size: 2.357142857142857em; //33px
+      color: #fff;
+    }
+    .fa-clock-o, .fa-life-ring { animation: clock 6s linear 0s infinite; }
+    .fa-thumbs-up { animation: hand 3s linear 0s infinite; }
+    .fa-weixin { animation: dialog 4s linear 0s infinite; }
+  }
+}
+
+
+
+ /* ==============================================================================
+=================================     TEAM      ==================================
+ ==============================================================================*/
+.team {
+  background: $team__bg;
+
+  //triangle
+  .active::after {
+    content: '';
+    position: absolute;
+    bottom: -59px;
+    left: 50%;
+    margin-left: -30px;
+    border: 29px solid transparent;
+    border-bottom: 20px solid #131316;
+    cursor: default;
+  }
+}
+
+.team-box {
+  margin-top: 50px;
+  position: relative;
+  cursor: pointer;
+
+  img { max-width: 270px; min-width: 200px; height: 250px; margin-bottom: 15px; }
+  .separator::after {
+    width: 100%;
+    left: 0;
+    margin-left: 0;
+    height: 3px;
+    background: #e1e6e6;
+  }
+}
+
+.team-name {
+  font-size: 1.428571428571429em; //20px
+  color: $primary-color;
+}
+.team-position {
+  font-size: 1.142857142857143em; //16px
+  color: $section-content__color;
+}
+
+
+ /* ==============================================================================
+========================     TEAM MEMBER INFO        ==================================
+ ==============================================================================*/
+.team-member-info {
+  background: $team-member-info__bg;
+  text-align: left;
+
+  .tab-pane {
+    max-width: 945px;
+    margin: 0 auto;
+    padding: 60px 0 40px;
+    position: relative;
+  }
+
+  .section-content { font-family: 'Myriad Pro'; color: #fff; }
+  
+  .close-info {
+    color: #fff;
+    font-size: 1.357142857142857em; //19px
+    position: absolute;
+    top: 70px;
+    right: 175px;
+    cursor: pointer;
+    transition: .2s;
+    &:hover { color: $primary-color; transform: rotate(180deg); }
+  }
+}
+
+.social {
+  display: flex;
+  .social-icon {
+    text-align: center;
+    border: 1px solid #fff;
+    height: 35px;
+    line-height: 33px;
+    width: 35px;
+    margin-right: 20px;
+    margin-top: 15px;
+    transition: .5s;
+    &:hover { background: $primary-color; }
+    .fa {
+      font-size: 1.357142857142857em; //19px
+      color: #fff;
+    }
+  }
+}
+
+
+
+ /* ==============================================================================
+=================================     SKILLS      ==================================
+ ==============================================================================*/
+.skills {
+  background: $skills__bg;
+
+  .section-subTitle,
+  .section-content { color: #fff; }
+
+  .circle-wrapper {
+    @include flex(row, center, space-between);
+    margin-top: 60px;
+    .circle-block { position: relative; }
+    input { font-size: 2.5em !important; margin-left: -120px !important; }
+    .percent {
+      color: $primary-color;
+      font-size: 2.5em; //35px
+      font-family: "Oswald-Light";
+      position: absolute;
+      top: 46px;
+      left: 55%;
+    }
+    .skill-circle__title {
+      margin-top: 15px;
+      color: $primary-color;
+      font-size: 1.428571428571429em; //20px
+    }
+  }
+}
+
+
+ /* ==============================================================================
+=================================     OUR CLIENTS      ==================================
+ ==============================================================================*/
+.clients-logo {
+  @include flex(row, center, space-between);
+  margin-top: 85px;
+  .pratners-img {
+    background: url(../img/partners-logo.png) no-repeat;
+    transition: .5s;
+    &:nth-child(1) {
+      width: 101px;
+      height: 52px;
+      &:hover { background-position: 0 -60px; }
+    }
+    &:nth-child(2) {
+      width: 140px;
+      height: 43px;
+      background-position-x: -110px;
+      &:hover { background-position: -110px -60px; }
+    }
+     &:nth-child(3) {
+      width: 152px;
+      height: 42px;
+      background-position-x: -257px;
+      &:hover { background-position: -257px -60px; }
+    }
+    &:nth-child(4) {
+      width: 164px;
+      height: 40px;
+      background-position-x: -415px;
+      &:hover { background-position: -415px -60px; }
+    }
+    &:nth-child(5) {
+      width: 146px;
+      height: 36px;
+      background-position-x:  -590px;
+      &:hover { background-position: -590px -60px; }
+    }
+    &:nth-child(6) {
+      width: 101px;
+      height: 52px;
+      &:hover { background-position: 0 -60px; }
+    }
+  }
+}
+
+
+
+ /* ==============================================================================
+=================================     COMMENTS      ==================================
+ ==============================================================================*/
+ .client-comments {
+  background: $client-comments;
+  .comments-content {
+    color: #fff;
+    font-size: 1.428571428571429em; //20px
+  }
+  .comment-author {
+    color: #fff;
+    font-size: 1.142857142857143em;; //16px
+  }
+}
+
+ .comment-slider {
+  overflow: hidden;
+  .slick-slide { float: left; &:focus { outline: none; } }
+  .slick-dots {
+    li {
+      display: inline-block;
+      margin-right: 7px;
+    }
+    button {
+      width: 5px;
+      height: 5px;
+      font-size: 0;
+      background: #fff;
+      padding: 0;
+      border: none;
+      &:focus {
+        outline: none;
+      }
+    }
+    .slick-active button{ background: $primary-color; }
+  }
+ }
+
+
+
+ /* ==============================================================================
+==============================     CONTACT US      ==================================
+ ==============================================================================*/
+.contact-us {
+  .contact-box { margin-top: 55px; }
+
+  .fa {
+    color: $primary-color;
+    font-size: 2.285714285714286em; //32px
+  }
+
+  .contact-us__icon-title {
+    font-size: 1.428571428571429em; //20px
+    margin: 20px 0 15px;
+    color: #131316;
+  }
+
+  .contact-us__icon-descr {
+      font-family: "Oswald-Light";
+      color: #515151;
+      font-size: 1.428571428571429em; //20px
+  }
+}
+
+
+
+ /* ==============================================================================
+============================     CONTACT FORM      ==================================
+ ==============================================================================*/
+ .contact-form {
+  background: $contact-form__bg;
+  .section-subTitle,
+  .section-content { color: #fff; }
+}
+
+
+
+/* ==============================================================================
+=================================     FOOTER      ==================================
+ ==============================================================================*/
+ .footer {
+  background: $footer__bg;
+  padding: 30px 0;
+  text-align: center;
+  .section-content { color: #fff; }
+  .footer-link { color: $primary-color; }
+  .fa {
+    color: #fff;
+    font-size: 1.142857142857143em; //16px
+    margin-right: 15px;
+    &:hover { color: $primary-color; }
+  }
+ }
