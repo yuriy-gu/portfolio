@@ -8,6 +8,7 @@
     left: 0;
     top: 50%;
     margin-top: -2px;
+    @media (max-width:768px) { display: none; }
   }
 }
 
@@ -45,7 +46,7 @@
   font-size: 1.142857142857143em; //16px
 }
 
-.section-padding { padding: 55px 0 60px; text-align: center; }
+.section-padding { padding: 55px 15px 60px; text-align: center; }
 
 .nav { border: none; }
 .nav li a {

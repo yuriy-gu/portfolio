@@ -7,15 +7,25 @@
   left: 0;
   width: 100%;
   background: rgba(0,0,0,.5);
-  padding-bottom: 20px;
   z-index: 10;
+  .flex-item { 
+    display: flex;
+    align-items: center; 
+    @media (max-width:480px) { display: block; }    
+  }
 }
 
-.logo-img { width: 105px; height: 59px; } 
+.logo {
+  display: block;
+  padding-bottom: 20px;
+  @media (max-width:480px) { text-align: center; padding-bottom: 5px; }  
+  img { width: 105px; height: 59px;} 
+}
 
 .header-nav {
   @include flex(row, center, space-between)
-  padding-top: 12px;
+  margin: 0;
+  @media (max-width:480px) { flex-wrap: wrap; }  
 
   .nav__item {
     a {
@@ -27,6 +37,7 @@
       padding-left: 27px;
       &:hover,
       &:focus { background-color: transparent; color: $primary-color; }
+      @media (max-width:480px) { margin: 10px; padding: 10px; }  
     }
     .nav-active { color: $primary-color; }
   }
@@ -154,11 +165,13 @@
 ===============================     PORTFOLIO      ==================================
  ==============================================================================*/
 .portfolio {
+  padding: 55px 0px 60px;
+  text-align: center;
   //tab navigation
   .nav-tabs {
     border-bottom: none;
-    justify-content: center;
     margin: 45px 0 60px;
+    @media (max-width:768px) { display: flex; justify-content: center; flex-wrap: wrap; margin: 10px 0; }
     li {
       a {
         border: none;
@@ -166,6 +179,7 @@
         font-size: 1.142857142857143em; //16px
         padding: 0 30px;
         &:hover, &:focus, &:active { color: $primary-color; background: none; border: none; }
+        @media (max-width:768px) { margin: 10px 0; }
       }
     }
     .active a { color: $primary-color; }
@@ -184,11 +198,14 @@
 .our-works {
   padding: 0;
   margin: 65px -7px;
+  @media (max-width:992px) { display: flex; justify-content: center; flex-wrap: wrap; }
   a {
     position: relative;
     overflow: hidden;
     float: left;
     width: 16.6vw;
+    @media (max-width:992px) { float: none; width: 30%; }
+    @media (max-width:480px) { float: none; width: 45%; }
     &::before, 
     &::after {
       background: rgba(0,0,0,.4);
@@ -236,6 +253,7 @@
   .proud-box__wrapper {
     @include flex(row, center, space-between);
     margin-top: 60px;
+    @media (max-width:768px) { flex-direction: column; }
   }
    .proud-box {
     border: 1px solid $primary-color;
@@ -243,6 +261,7 @@
     margin-right: 30px;
     max-width: 270px;
     width: 100%;
+    @media (max-width:768px) { margin: 0; }
     &:last-child { margin-right: 0; }
 
     .box-number {
@@ -299,12 +318,13 @@
  ==============================================================================*/
 .team {
   background: $team__bg;
+  @media (max-width:768px) { display: none; }
 
   //triangle
   .active::after {
     content: '';
     position: absolute;
-    bottom: -59px;
+    bottom: -60px;
     left: 50%;
     margin-left: -30px;
     border: 29px solid transparent;
@@ -318,14 +338,20 @@
   position: relative;
   cursor: pointer;
 
-  img { max-width: 270px; min-width: 200px; height: 250px; margin-bottom: 15px; }
-  .separator::after {
-    width: 100%;
-    left: 0;
-    margin-left: 0;
-    height: 3px;
-    background: #e1e6e6;
-  }
+  img { 
+    max-width: 270px;
+    min-width: 100px; 
+    height: 250px; 
+    min-height:  130px;
+    height: 100%;
+    margin-bottom: 15px; }
+    .separator::after {
+      width: 100%;
+      left: 0;
+      margin-left: 0;
+      height: 3px;
+      background: #e1e6e6;
+    }
 }
 
 .team-name {
@@ -344,11 +370,12 @@
 .team-member-info {
   background: $team-member-info__bg;
   text-align: left;
+  @media (max-width:768px) { display: none; }
 
   .tab-pane {
     max-width: 945px;
     margin: 0 auto;
-    padding: 60px 0 40px;
+    padding: 60px 15px 40px;
     position: relative;
   }
 
@@ -399,6 +426,7 @@
   .circle-wrapper {
     @include flex(row, center, space-between);
     margin-top: 60px;
+    @media (max-width:768px) { flex-direction: column; }
     .circle-block { position: relative; }
     input { font-size: 2.5em !important; margin-left: -120px !important; }
     .percent {
@@ -424,9 +452,11 @@
 .clients-logo {
   @include flex(row, center, space-between);
   margin-top: 85px;
+  @media (max-width:992px) { flex-wrap: wrap; justify-content: center; }
   .pratners-img {
     background: url(../img/partners-logo.png) no-repeat;
     transition: .5s;
+    @media (max-width:992px) { margin: 10px;  }
     &:nth-child(1) {
       width: 101px;
       height: 52px;
@@ -480,6 +510,8 @@
     font-size: 1.142857142857143em;; //16px
   }
 }
+
+.slider-wraperr { max-width: 656px;  margin:auto; }
 
  .comment-slider {
   overflow: hidden;
