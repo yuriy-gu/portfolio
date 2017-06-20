@@ -29,7 +29,7 @@
   height: 50px;
   width: 50px;
 }
-.nav__item { display: inline-block; }
+.nav__item { float: left; }
 .nav__item_text {
   color: #444A55;
   display: block;
@@ -103,10 +103,10 @@
 .slider_btn {
   border: 3px solid #fff;
   font: 1.625rem "opensans-semibold";
-  height: 70px;
-  line-height: 70px;
+  height: 63px;
+  line-height: 57px;
   margin-top: 2em;
-  width: 230px;
+  width: 225px;
   &:hover {
     background: #fff;
     color: #49cbcd;
@@ -282,8 +282,8 @@
   background: #00C3F5;
   float: right;
   font: 1.375rem 'opensans-regular';
-  height: 46px;
-  line-height: 46px;
+  height: 50px;
+  line-height: 50px;
   width: 170px;
   &:hover { opacity: .7; }
 }

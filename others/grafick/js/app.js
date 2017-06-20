@@ -1,1 +1,0 @@
-ratingEffect.appendRating(ratings);
